@@ -580,39 +580,16 @@ export function FontainebleauAppBody() {
                 </p>
               </div>
 
-              <div className="fb-timeline" aria-label="Project timeline from research to launch">
-                <div className="fb-timeline-axis">
-                  <span>Ideation</span>
-                  <span>Launch</span>
-                </div>
-                <div className="fb-timeline-phases">
-                  <div className="fb-phase-card fb-phase-card--research">
-                    <div className="fb-phase-head">
-                      <span className="fb-phase-dot" aria-hidden="true">
-                        <img src="/assets/fb-app-timeline-dot.png" alt="" width="37" height="37" loading="lazy" />
-                      </span>
-                      <span className="fb-phase-label">Research (2 weeks)</span>
-                    </div>
-                  </div>
-                  <div className="fb-phase-card fb-phase-card--design">
-                    <div className="fb-phase-head">
-                      <span className="fb-phase-dot" aria-hidden="true">
-                        <img src="/assets/fb-app-timeline-dot.png" alt="" width="37" height="37" loading="lazy" />
-                      </span>
-                      <span className="fb-phase-label">UX/UI Design (3 weeks)</span>
-                    </div>
-                  </div>
-                  <div className="fb-phase-card fb-phase-card--dev">
-                    <div className="fb-phase-head">
-                      <span className="fb-phase-dot" aria-hidden="true">
-                        <img src="/assets/fb-app-timeline-dot.png" alt="" width="37" height="37" loading="lazy" />
-                      </span>
-                      <span className="fb-phase-label">Development (4 weeks)</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="fb-timeline-bar" role="presentation"></div>
-              </div>
+              <figure className="fb-timeline-graphic">
+                <img
+                  src="/assets/fb-app-timeline.png"
+                  alt="Project timeline from Ideation through Research, UX/UI Design, and Development to Launch."
+                  width={1024}
+                  height={138}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
 
               <div className="row-split">
                 <h3 className="row-split-title">Trade Off</h3>
