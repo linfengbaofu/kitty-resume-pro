@@ -217,12 +217,22 @@ export function FontainebleauWebBody() {
 
               <div className="fb-pain-grid fb-pain-grid--three">
                 <div className="fb-pain-col">
-                  <span className="fb-pain-dot" aria-hidden="true"></span>
+                  <span className="fb-pain-dot" aria-hidden="true">
+                    <img src="/assets/Calendar%2002.png" alt="" width="24" height="24" loading="lazy" />
+                  </span>
                   <h4 className="fb-pain-title">Unclear Entry Point</h4>
                   <p className="fb-pain-body">Customers were confused about where to begin on the homepage.</p>
                 </div>
                 <div className="fb-pain-col">
-                  <span className="fb-pain-dot" aria-hidden="true"></span>
+                  <span className="fb-pain-dot" aria-hidden="true">
+                    <img
+                      src="/assets/Align%20Vertical%20Center.png"
+                      alt=""
+                      width="24"
+                      height="24"
+                      loading="lazy"
+                    />
+                  </span>
                   <h4 className="fb-pain-title">Insufficient Information Clarity</h4>
                   <p className="fb-pain-body">
                     A brief introduction to the accommodation did not provide customers with an intuitive idea, as there was
@@ -230,7 +240,9 @@ export function FontainebleauWebBody() {
                   </p>
                 </div>
                 <div className="fb-pain-col">
-                  <span className="fb-pain-dot" aria-hidden="true"></span>
+                  <span className="fb-pain-dot" aria-hidden="true">
+                    <img src="/assets/Badge%20Discount.png" alt="" width="24" height="24" loading="lazy" />
+                  </span>
                   <h4 className="fb-pain-title">Lack of Efficient Comparison</h4>
                   <p className="fb-pain-body">
                     80% of customers expected to see a grid displaying all options on the same page, rather than having to
@@ -549,21 +561,33 @@ export function FontainebleauWebBody() {
 
               <div className="fb-results-grid">
                 <div className="fb-results-col">
-                  <span className="fb-pain-dot" aria-hidden="true"></span>
+                  <span className="fb-pain-dot" aria-hidden="true">
+                    <img src="/assets/Calendar%2002.png" alt="" width="24" height="24" loading="lazy" />
+                  </span>
                   <h3 className="fb-results-title">&minus;40% Booking Time</h3>
                   <p className="fb-results-body">
                     Reduced booking time through a streamlined and intuitive user flow.
                   </p>
                 </div>
                 <div className="fb-results-col">
-                  <span className="fb-pain-dot" aria-hidden="true"></span>
+                  <span className="fb-pain-dot" aria-hidden="true">
+                    <img
+                      src="/assets/Align%20Vertical%20Center.png"
+                      alt=""
+                      width="24"
+                      height="24"
+                      loading="lazy"
+                    />
+                  </span>
                   <h3 className="fb-results-title">+70% User Engagement</h3>
                   <p className="fb-results-body">
                     Increased daily active users by over 70% due to improved usability.
                   </p>
                 </div>
                 <div className="fb-results-col">
-                  <span className="fb-pain-dot" aria-hidden="true"></span>
+                  <span className="fb-pain-dot" aria-hidden="true">
+                    <img src="/assets/Badge%20Discount.png" alt="" width="24" height="24" loading="lazy" />
+                  </span>
                   <h3 className="fb-results-title">+1.2 Rating Points</h3>
                   <p className="fb-results-body">
                     Enhanced service efficiency and experience led to higher customer satisfaction.

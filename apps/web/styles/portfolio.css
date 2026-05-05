@@ -2463,13 +2463,22 @@ main {
   width: 100%;
 }
 .fb-pain-dot {
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 40px;
   height: 40px;
   border-radius: 50%;
   background: #1f2130;
-  /* background: radial-gradient(circle at 30% 25%, #5c6fd0, #2e3770 70%); */
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.06) inset;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.fb-pain-dot img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  display: block;
 }
 .fb-pain-title {
   font-family: var(--font-sans);
@@ -2807,7 +2816,7 @@ main {
   margin: 0;
   font-size: 15px;
   line-height: 1.55;
-  color: #878787;
+  color: #fff;
   text-align: left;
   width: 100%;
 }

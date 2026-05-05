@@ -241,7 +241,9 @@ export function FontainebleauAppBody() {
 
               <div className="fb-pain-grid">
                 <div className="fb-pain-col">
-                  <span className="fb-pain-dot" aria-hidden="true"></span>
+                  <span className="fb-pain-dot" aria-hidden="true">
+                    <img src="/assets/Calendar%2002.png" alt="" width="24" height="24" loading="lazy" />
+                  </span>
                   <h4 className="fb-pain-title">Check-in Process</h4>
                   <p className="fb-pain-body">
                     With a high volume of daily check-ins and check-outs, lobby wait
@@ -249,7 +251,15 @@ export function FontainebleauAppBody() {
                   </p>
                 </div>
                 <div className="fb-pain-col">
-                  <span className="fb-pain-dot" aria-hidden="true"></span>
+                  <span className="fb-pain-dot" aria-hidden="true">
+                    <img
+                      src="/assets/Align%20Vertical%20Center.png"
+                      alt=""
+                      width="24"
+                      height="24"
+                      loading="lazy"
+                    />
+                  </span>
                   <h4 className="fb-pain-title">Valet Parking</h4>
                   <p className="fb-pain-body">
                     During peak periods, hotel valet parking may require guests to wait
@@ -257,7 +267,9 @@ export function FontainebleauAppBody() {
                   </p>
                 </div>
                 <div className="fb-pain-col">
-                  <span className="fb-pain-dot" aria-hidden="true"></span>
+                  <span className="fb-pain-dot" aria-hidden="true">
+                    <img src="/assets/Badge%20Discount.png" alt="" width="24" height="24" loading="lazy" />
+                  </span>
                   <h4 className="fb-pain-title">Indoor Dining</h4>
                   <p className="fb-pain-body">
                     Customers often wait nearly 40 minutes to receive their food after
@@ -265,7 +277,9 @@ export function FontainebleauAppBody() {
                   </p>
                 </div>
                 <div className="fb-pain-col">
-                  <span className="fb-pain-dot" aria-hidden="true"></span>
+                  <span className="fb-pain-dot" aria-hidden="true">
+                    <img src="/assets/Calendar%2002.png" alt="" width="24" height="24" loading="lazy" />
+                  </span>
                   <h4 className="fb-pain-title">Wayfinding</h4>
                   <p className="fb-pain-body">
                     When guests get lost in the resort, they struggle to find any
@@ -672,7 +686,9 @@ export function FontainebleauAppBody() {
 
               <div className="fb-results-grid">
                 <div className="fb-results-col">
-                  <span className="fb-pain-dot" aria-hidden="true"></span>
+                  <span className="fb-pain-dot" aria-hidden="true">
+                    <img src="/assets/Calendar%2002.png" alt="" width="24" height="24" loading="lazy" />
+                  </span>
                   <h3 className="fb-results-title">8-Week Product Launch</h3>
                   <p className="fb-results-body">
                     The app was designed and developed from concept to launch within
@@ -680,7 +696,15 @@ export function FontainebleauAppBody() {
                   </p>
                 </div>
                 <div className="fb-results-col">
-                  <span className="fb-pain-dot" aria-hidden="true"></span>
+                  <span className="fb-pain-dot" aria-hidden="true">
+                    <img
+                      src="/assets/Align%20Vertical%20Center.png"
+                      alt=""
+                      width="24"
+                      height="24"
+                      loading="lazy"
+                    />
+                  </span>
                   <h3 className="fb-results-title">+10M+ Downloads</h3>
                   <p className="fb-results-body">
                     The app reached over 10 million downloads shortly after launch,
@@ -688,7 +712,9 @@ export function FontainebleauAppBody() {
                   </p>
                 </div>
                 <div className="fb-results-col">
-                  <span className="fb-pain-dot" aria-hidden="true"></span>
+                  <span className="fb-pain-dot" aria-hidden="true">
+                    <img src="/assets/Badge%20Discount.png" alt="" width="24" height="24" loading="lazy" />
+                  </span>
                   <h3 className="fb-results-title">+1.2 Rating Points</h3>
                   <p className="fb-results-body">
                     The optimized service flow and reduced wait times resulted in a
