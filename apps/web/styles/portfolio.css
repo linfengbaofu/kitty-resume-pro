@@ -828,6 +828,29 @@
   outline: 2px solid rgba(159, 166, 219, 0.6);
   outline-offset: 8px;
 }
+
+/* Fontainebleau overview: intro links to case study; hero is a separate video trigger */
+.case-intro-only-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: var(--radius-portfolio-card);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.case-intro-only-link:hover .case-cta,
+.case-intro-only-link:focus-visible .case-cta {
+  background: rgba(120, 120, 130, 0.32);
+  border-color: rgba(255, 255, 255, 0.18);
+  transform: translateX(4px);
+}
+.case-intro-only-link:focus-visible {
+  outline: 2px solid rgba(159, 166, 219, 0.6);
+  outline-offset: 8px;
+}
 .case-cta {
   display: inline-flex;
   align-items: center;
@@ -2325,7 +2348,7 @@ main {
 }
 
 /* Overview Web preview morphs into the Web case study hero */
-.page-fontainebleau:not(.page-case--detail) .case-section:nth-of-type(2).is-link .case-hero {
+.page-fontainebleau:not(.page-case--detail) .case-section:nth-of-type(2) .case-hero {
   view-transition-name: fontainebleau-web-shell;
 }
 .page-fontainebleau-web .case-section.case-hero-section .case-hero {

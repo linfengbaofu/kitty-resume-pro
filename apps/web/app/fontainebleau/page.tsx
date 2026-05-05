@@ -1,6 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
 import type { Metadata } from "next"
 import Link from "next/link"
+
+import { HeroVideoDialog } from "@workspace/ui/components/hero-video-dialog"
 
 import { CaseHeader } from "@/components/portfolio/case-header"
 import { SkipLink } from "@/components/portfolio/skip-link"
@@ -24,8 +25,12 @@ export default function FontainebleauPage() {
       />
 
       <main id="main" className="case-main relative z-[1]">
-        <section className="case-section is-link" aria-labelledby="case-1-title">
-          <Link className="case-link" href={siteLinks.fontainebleauApp} aria-labelledby="case-1-title">
+        <section className="case-section" aria-labelledby="case-1-title">
+          <Link
+            className="case-intro-only-link"
+            href={siteLinks.fontainebleauApp}
+            aria-labelledby="case-1-title"
+          >
             <div className="case-intro">
               <h1 id="case-1-title" className="case-title">
                 Fontainebleau Hotel APP
@@ -38,7 +43,7 @@ export default function FontainebleauPage() {
                 <li className="case-tag">Service Design</li>
                 <li className="case-tag">Case Study</li>
               </ul>
-              <span className="case-cta" aria-hidden="true">
+              <span className="case-cta">
                 <span>View case study</span>
                 <span className="case-cta-arrow">
                   <svg viewBox="0 0 8 8" width="12" height="12">
@@ -54,18 +59,23 @@ export default function FontainebleauPage() {
                 </span>
               </span>
             </div>
-            <figure className="case-hero" data-hero="primary">
-              <img
-                src="/assets/fontainebleau-app-hero.png"
-                alt="Fontainebleau Hotel app shown on an iPhone with guest services and quick links on screen."
-                loading="eager"
-              />
-            </figure>
           </Link>
+          <figure className="case-hero" data-hero="primary">
+            <HeroVideoDialog
+              videoSrc="/assets/Fontainebleauv1.mp4"
+              thumbnailSrc="/assets/Fontainebleauv1.png"
+              thumbnailAlt="Fontainebleau Hotel app — tap to play walkthrough video."
+              className="[&_img]:rounded-none [&_img]:border-0 [&_img]:shadow-none"
+            />
+          </figure>
         </section>
 
-        <section className="case-section is-link" aria-labelledby="case-2-title">
-          <Link className="case-link" href={siteLinks.fontainebleauWeb} aria-labelledby="case-2-title">
+        <section className="case-section" aria-labelledby="case-2-title">
+          <Link
+            className="case-intro-only-link"
+            href={siteLinks.fontainebleauWeb}
+            aria-labelledby="case-2-title"
+          >
             <div className="case-intro">
               <h2 id="case-2-title" className="case-title">
                 Fontainebleau Hotel Web
@@ -79,7 +89,7 @@ export default function FontainebleauPage() {
                 <li className="case-tag">Visual Design</li>
                 <li className="case-tag">Case Study</li>
               </ul>
-              <span className="case-cta" aria-hidden="true">
+              <span className="case-cta">
                 <span>View case study</span>
                 <span className="case-cta-arrow">
                   <svg viewBox="0 0 8 8" width="12" height="12">
@@ -95,14 +105,15 @@ export default function FontainebleauPage() {
                 </span>
               </span>
             </div>
-            <figure className="case-hero" data-hero="web-overview">
-              <img
-                src="/assets/fontainebleau-web-hero.png"
-                alt="Fontainebleau Hotel website mockup displayed on a laptop sitting on a stone ledge, showing the casino landing page."
-                loading="lazy"
-              />
-            </figure>
           </Link>
+          <figure className="case-hero" data-hero="web-overview">
+            <HeroVideoDialog
+              videoSrc="/assets/Fontainebleauv2.mp4"
+              thumbnailSrc="/assets/Fontainebleauv2.png"
+              thumbnailAlt="Fontainebleau Hotel website — tap to play walkthrough video."
+              className="[&_img]:rounded-none [&_img]:border-0 [&_img]:shadow-none"
+            />
+          </figure>
         </section>
       </main>
     </div>
