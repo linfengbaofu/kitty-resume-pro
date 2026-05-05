@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
-/* eslint-disable @next/next/no-html-link-for-pages */
 /* Auto-generated from static HTML — structure and classes preserved; paths updated for Next.js */
+
+import { HeroVideoDialog } from "@workspace/ui/components/hero-video-dialog"
 
 import { CaseHeader } from "@/components/portfolio/case-header"
 import { SkipLink } from "@/components/portfolio/skip-link"
@@ -31,12 +32,11 @@ export function FontainebleauWebBody() {
                 </ul>
               </div>
               <figure className="case-hero" data-hero="web-detail">
-                <img
-                  src="/assets/fontainebleau-web-hero.png"
-                  alt="Fontainebleau Hotel website displayed on a laptop mockup over a dark, rippling background."
-                  loading="eager"
-                  width="1024"
-                  height="704"
+                <HeroVideoDialog
+                  videoSrc="/assets/Fontainebleauv2.mp4"
+                  thumbnailSrc="/assets/Fontainebleauv2.png"
+                  thumbnailAlt="Fontainebleau Hotel website — tap to play walkthrough video."
+                  className="[&_img]:rounded-none [&_img]:border-0 [&_img]:shadow-none"
                 />
               </figure>
             </section>

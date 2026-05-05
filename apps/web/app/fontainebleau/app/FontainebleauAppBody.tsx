@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
-/* eslint-disable @next/next/no-html-link-for-pages */
 /* Auto-generated from static HTML — structure and classes preserved; paths updated for Next.js */
+
+import { HeroVideoDialog } from "@workspace/ui/components/hero-video-dialog"
 
 import { CaseHeader } from "@/components/portfolio/case-header"
 import { SkipLink } from "@/components/portfolio/skip-link"
@@ -32,12 +33,11 @@ export function FontainebleauAppBody() {
                 </ul>
               </div>
               <figure className="case-hero" data-hero="app-detail">
-                <img
-                  src="/assets/fontainebleau-app-hero.png"
-                  alt="Fontainebleau Hotel mobile app interface shown on a phone mockup with quick links to guest services."
-                  loading="eager"
-                  width="1024"
-                  height="704"
+                <HeroVideoDialog
+                  videoSrc="/assets/Fontainebleauv1.mp4"
+                  thumbnailSrc="/assets/Fontainebleauv1.png"
+                  thumbnailAlt="Fontainebleau Hotel app — tap to play walkthrough video."
+                  className="[&_img]:rounded-none [&_img]:border-0 [&_img]:shadow-none"
                 />
               </figure>
             </section>
