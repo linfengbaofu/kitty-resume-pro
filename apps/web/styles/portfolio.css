@@ -2633,13 +2633,16 @@ main {
 .fb-web-bento {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.42fr) minmax(0, 1fr);
-  grid-template-rows: minmax(196px, 1fr) minmax(148px, 0.78fr) minmax(196px, 1fr);
+  /* Three equal rows: left 2+1, center 1+1+1, right 1+2 — bottoms of f / e / g align */
+  grid-template-rows: repeat(3, minmax(0, 1fr));
   gap: 14px;
   width: 100%;
+  min-height: clamp(480px, 50vw, 680px);
   max-width: 1200px;
   margin: 0 auto;
   list-style: none;
   padding: 0;
+  align-items: stretch;
 }
 .fb-web-bento-cell {
   position: relative;
@@ -2842,6 +2845,7 @@ main {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: none;
     grid-auto-rows: minmax(160px, auto);
+    min-height: 0;
   }
   .fb-web-bento-a,
   .fb-web-bento-b,
@@ -2878,6 +2882,7 @@ main {
     grid-template-rows: none;
     grid-auto-rows: minmax(160px, auto);
     gap: 14px;
+    min-height: 0;
   }
   .fb-web-bento-a,
   .fb-web-bento-b,

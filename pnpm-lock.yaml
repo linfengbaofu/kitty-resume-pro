@@ -32,6 +32,9 @@ importers:
       '@workspace/ui':
         specifier: workspace:*
         version: link:../../packages/ui
+      gsap:
+        specifier: ^3.13.0
+        version: 3.15.0
       lucide-react:
         specifier: ^1.14.0
         version: 1.14.0(react@19.2.4)

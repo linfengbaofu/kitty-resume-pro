@@ -90,10 +90,18 @@ export function FontainebleauWebBody() {
                   <img src="/assets/fb-web-bento-e.png" alt="Dining experience at the resort." loading="lazy" />
                 </div>
                 <div className="fb-web-bento-cell fb-web-bento-f" role="listitem">
-                  <img src="/assets/fb-web-bento-f.png" alt="Architectural detail at Fontainebleau." loading="lazy" />
+                  <img
+                    src="/assets/fb-web-bento-g.png"
+                    alt="Indoor spa and lounge seating with blue sofas."
+                    loading="lazy"
+                  />
                 </div>
                 <div className="fb-web-bento-cell fb-web-bento-g" role="listitem">
-                  <img src="/assets/fb-web-bento-g.png" alt="Resort lounge or lobby space." loading="lazy" />
+                  <img
+                    src="/assets/fb-web-bento-f.png"
+                    alt="Tall resort tower and skyline at dusk."
+                    loading="lazy"
+                  />
                 </div>
               </div>
             </section>
