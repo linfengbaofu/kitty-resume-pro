@@ -1539,7 +1539,7 @@ main {
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #6e8df0, #c66cff 70%);
+  background: #fff;
   box-shadow: 0 0 12px rgba(140, 120, 255, 0.6);
 }
 .part-label {
@@ -2477,6 +2477,7 @@ main {
   font-size: 22px;
   color: var(--color-portfolio-text);
   margin: 0;
+  margin-top: 20px;
 }
 .fb-pain-body {
   color: #878787;
@@ -2598,12 +2599,16 @@ main {
   font-size: 22px;
   margin: 0;
   color: var(--color-portfolio-text);
+  margin-top: 20px;
+
 }
 .fb-results-body {
-  color: var(--color-case-muted);
+
+  color: #878787;
   font-size: 16px;
   line-height: 1.55;
   margin: 0;
+  margin-top: 10px;
 }
 
 /* ----- Fontainebleau WEB detail ----- */
@@ -2714,16 +2719,19 @@ main {
 .fb-comp-brand {
   height: 40px;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .fb-comp-brand img {
   max-height: 40px;
   width: auto;
-  /* max-width: 165px; */
+  max-width: 180px;
   object-fit: contain;
-  object-position: left center;
+  object-position: center;
 }
 .fb-comp-shot {
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
   aspect-ratio: 16 / 9;
   background: #111320;
@@ -2739,45 +2747,69 @@ main {
   display: flex;
   flex-direction: column;
   gap: 0;
+  width: 100%;
 }
 .fb-comp-meter-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid #252631;
-  font-size: 16px;
+  gap: 16px;
+  min-height: 44px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 15px;
 }
 .fb-comp-meter-row:last-of-type {
   border-bottom: none;
   padding-bottom: 0;
 }
-.fb-comp-meter-row dt {
-  color: var(--color-case-muted);
+.fb-comp-meter-label {
+  color: #878787;
   font-weight: 400;
   margin: 0;
+  line-height: 1.35;
+  text-align: left;
 }
-.fb-comp-meter-row dd {
-  margin: 0;
-  line-height: 0;
+.fb-comp-dots {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 9px;
+  flex-shrink: 0;
 }
-.fb-comp-meter-row img {
-  display: block;
-  width: 52px;
+.fb-comp-dot {
+  width: 12px;
   height: 12px;
-  object-fit: contain;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+}
+.fb-comp-dot--on {
+  background: #fff;
+  box-shadow: none;
+}
+.fb-comp-summary {
+  margin-top: 4px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  width: 100%;
 }
 .fb-comp-summary-label {
-  color: var(--color-case-muted);
-  font-size: 16px;
-  margin: 0 0 10px;
+  color: #878787;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  margin: 0 0 8px;
+  text-align: left;
+  width: 100%;
 }
 .fb-comp-summary-body {
   margin: 0;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.55;
-  color: var(--color-portfolio-text);
+  color: #878787;
+  text-align: left;
+  width: 100%;
 }
 
 .fb-web-brand-stack {

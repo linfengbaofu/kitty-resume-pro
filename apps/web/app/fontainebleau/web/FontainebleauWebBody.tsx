@@ -7,6 +7,21 @@ import { CaseHeader } from "@/components/portfolio/case-header"
 import { SkipLink } from "@/components/portfolio/skip-link"
 import { siteLinks } from "@/config/site-links"
 
+type CompScore = 1 | 2 | 3
+
+function CompMeterRow({ label, score }: { label: string; score: CompScore }) {
+  return (
+    <div className="fb-comp-meter-row" role="group" aria-label={`${label}: ${score} out of 3`}>
+      <span className="fb-comp-meter-label">{label}</span>
+      <span className="fb-comp-dots" aria-hidden>
+        {[1, 2, 3].map((n) => (
+          <span key={n} className={n <= score ? "fb-comp-dot fb-comp-dot--on" : "fb-comp-dot"} />
+        ))}
+      </span>
+    </div>
+  )
+}
+
 export function FontainebleauWebBody() {
   return (
     <>
@@ -312,7 +327,7 @@ export function FontainebleauWebBody() {
 
               <div className="fb-comp-grid">
                 <article className="fb-comp-card">
-                  <div className="fb-comp-brand flex items-center justify-center h-10" >
+                  <div className="fb-comp-brand">
                     <img src="/assets/fb-web-comp-fs-logo.png" alt="Four Seasons" loading="lazy" />
                   </div>
                   <div className="fb-comp-shot">
@@ -322,20 +337,11 @@ export function FontainebleauWebBody() {
                       loading="lazy"
                     />
                   </div>
-                  <dl className="fb-comp-meters">
-                    <div className="fb-comp-meter-row">
-                      <dt>User expertise</dt>
-                      <dd><img src="/assets/fb-web-meter-low.png" alt="" width="52" height="12" loading="lazy" /></dd>
-                    </div>
-                    <div className="fb-comp-meter-row">
-                      <dt>Engagement</dt>
-                      <dd><img src="/assets/fb-web-meter-high.png" alt="" width="52" height="12" loading="lazy" /></dd>
-                    </div>
-                    <div className="fb-comp-meter-row">
-                      <dt>Conversion</dt>
-                      <dd><img src="/assets/fb-web-meter-low.png" alt="" width="52" height="12" loading="lazy" /></dd>
-                    </div>
-                  </dl>
+                  <div className="fb-comp-meters">
+                    <CompMeterRow label="User expertise" score={3} />
+                    <CompMeterRow label="Engagement" score={3} />
+                    <CompMeterRow label="Conversion" score={2} />
+                  </div>
                   <div className="fb-comp-summary">
                     <p className="fb-comp-summary-label">Summary</p>
                     <p className="fb-comp-summary-body">
@@ -347,26 +353,17 @@ export function FontainebleauWebBody() {
                 </article>
 
                 <article className="fb-comp-card">
-                  <div className="fb-comp-brand flex items-center justify-center h-10" >
+                  <div className="fb-comp-brand">
                     <img src="/assets/fb-web-comp-mgm-logo.png" alt="MGM Resorts" loading="lazy" />
                   </div>
                   <div className="fb-comp-shot">
                     <img src="/assets/fb-web-comp-mgm-screen.png" alt="MGM website screenshot." loading="lazy" />
                   </div>
-                  <dl className="fb-comp-meters">
-                    <div className="fb-comp-meter-row">
-                      <dt>User expertise</dt>
-                      <dd><img src="/assets/fb-web-meter-high.png" alt="" width="52" height="12" loading="lazy" /></dd>
-                    </div>
-                    <div className="fb-comp-meter-row">
-                      <dt>Engagement</dt>
-                      <dd><img src="/assets/fb-web-meter-low.png" alt="" width="52" height="12" loading="lazy" /></dd>
-                    </div>
-                    <div className="fb-comp-meter-row">
-                      <dt>Conversion</dt>
-                      <dd><img src="/assets/fb-web-meter-high.png" alt="" width="52" height="12" loading="lazy" /></dd>
-                    </div>
-                  </dl>
+                  <div className="fb-comp-meters">
+                    <CompMeterRow label="User expertise" score={3} />
+                    <CompMeterRow label="Engagement" score={2} />
+                    <CompMeterRow label="Conversion" score={3} />
+                  </div>
                   <div className="fb-comp-summary">
                     <p className="fb-comp-summary-label">Summary</p>
                     <p className="fb-comp-summary-body">
@@ -378,26 +375,17 @@ export function FontainebleauWebBody() {
                 </article>
 
                 <article className="fb-comp-card">
-                  <div className="fb-comp-brand flex items-center justify-center h-10" >
+                  <div className="fb-comp-brand">
                     <img src="/assets/fb-web-comp-wynn-logo.png" alt="Wynn Las Vegas" loading="lazy" />
                   </div>
                   <div className="fb-comp-shot">
                     <img src="/assets/fb-web-comp-wynn-screen.png" alt="Wynn website screenshot." loading="lazy" />
                   </div>
-                  <dl className="fb-comp-meters">
-                    <div className="fb-comp-meter-row">
-                      <dt>User expertise</dt>
-                      <dd><img src="/assets/fb-web-meter-low.png" alt="" width="52" height="12" loading="lazy" /></dd>
-                    </div>
-                    <div className="fb-comp-meter-row">
-                      <dt>Engagement</dt>
-                      <dd><img src="/assets/fb-web-meter-high.png" alt="" width="52" height="12" loading="lazy" /></dd>
-                    </div>
-                    <div className="fb-comp-meter-row">
-                      <dt>Conversion</dt>
-                      <dd><img src="/assets/fb-web-meter-high.png" alt="" width="52" height="12" loading="lazy" /></dd>
-                    </div>
-                  </dl>
+                  <div className="fb-comp-meters">
+                    <CompMeterRow label="User expertise" score={3} />
+                    <CompMeterRow label="Engagement" score={3} />
+                    <CompMeterRow label="Conversion" score={3} />
+                  </div>
                   <div className="fb-comp-summary">
                     <p className="fb-comp-summary-label">Summary</p>
                     <p className="fb-comp-summary-body">
