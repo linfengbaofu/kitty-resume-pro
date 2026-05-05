@@ -169,7 +169,8 @@ export function FontainebleauAppBody() {
                 <div className="goal-grid">
                   <article className="goal-card">
                     <div className="goal-icon">
-                      <img src="/assets/fb-app-goal-1.png" alt="" width="50" height="50" loading="lazy" />
+                      
+                      <img src="/assets/fb-web-goal-1.png" alt="" width="50" height="50" loading="lazy" />
                     </div>
                     <p className="goal-text">
                       Develop an integrated platform to quickly access the services,
@@ -178,7 +179,7 @@ export function FontainebleauAppBody() {
                   </article>
                   <article className="goal-card">
                     <div className="goal-icon">
-                      <img src="/assets/fb-app-goal-2.png" alt="" width="50" height="50" loading="lazy" />
+                      <img src="/assets/fb-web-goal-2.png" alt="" width="50" height="50" loading="lazy" />
                     </div>
                     <p className="goal-text">
                       Launch the product within two months before the hotel&rsquo;s
@@ -187,8 +188,7 @@ export function FontainebleauAppBody() {
                   </article>
                   <article className="goal-card">
                     <div className="goal-icon goal-icon--duo" aria-hidden="true">
-                      <img src="/assets/fb-app-goal-3a.png" alt="" width="50" height="50" loading="lazy" />
-                      <img src="/assets/fb-app-goal-3b.png" alt="" width="50" height="50" loading="lazy" />
+                      <img src="/assets/fb-web-goal-3.png" alt="" width="50" height="50" loading="lazy" />
                     </div>
                     <p className="goal-text">
                       Design a service platform for current customers in the hotel
@@ -196,7 +196,7 @@ export function FontainebleauAppBody() {
                   </article>
                   <article className="goal-card">
                     <div className="goal-icon">
-                      <img src="/assets/fb-app-goal-4.png" alt="" width="50" height="50" loading="lazy" />
+                      <img src="/assets/fb-web-goal-4.png" alt="" width="50" height="50" loading="lazy" />
                     </div>
                     <p className="goal-text">
                       Guide users to easily discover services and amenities within the

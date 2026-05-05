@@ -2634,13 +2634,12 @@ main {
 .fb-web-bento {
   display: grid;
   grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.38fr) minmax(0, 0.92fr);
-  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 0.92fr);
+  grid-template-rows: 200px 280px 200px;
   gap: 14px;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0;
-  min-height: clamp(520px, 52vw, 720px);
 }
 .fb-web-bento-cell {
   position: relative;
