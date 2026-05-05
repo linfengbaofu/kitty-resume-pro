@@ -1990,21 +1990,30 @@ main {
   background: #0d0e19;
   border: 1px solid #1f2335;
   border-radius: 28px;
-  padding: 32px 24px 32px;
+  padding: 80px 24px 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+/* Floated like the old insight-shield, but no colored box — icon only */
 .insight-icon {
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 56px;
   height: 56px;
-  flex-shrink: 0;
-  margin: 0 0 20px;
   object-fit: contain;
   display: block;
+  margin: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+  pointer-events: none;
 }
 .insight-icon--svg {
   color: #b6efc6;
+  overflow: visible;
 }
 .insight-body {
   display: flex;
@@ -2022,7 +2031,7 @@ main {
   margin: 0;
 }
 .insight-sub {
-  color: var(--color-case-muted);
+  color: #878787;
   font-size: 16px;
   line-height: 1.5;
   margin: 0;
@@ -2038,7 +2047,7 @@ main {
 }
 .insight-pills li {
   background: #232536;
-  color: #cdd3fb;
+  color: #878787;
   font-size: 16px;
   border-radius: 8px;
   padding: 10px 16px;
@@ -2709,7 +2718,7 @@ main {
 .fb-comp-brand img {
   max-height: 40px;
   width: auto;
-  max-width: 165px;
+  /* max-width: 165px; */
   object-fit: contain;
   object-position: left center;
 }
@@ -2914,8 +2923,13 @@ main {
   .row-split-title { font-size: 22px; }
   .row-split-body { font-size: 15px; }
   .comp-card { padding: 28px 22px; }
-  .insight-grid { margin-top: 48px; gap: 20px; }
-  .insight-card { padding: 28px 22px 28px; }
+  .insight-grid { margin-top: 56px; gap: 48px; }
+  .insight-card { padding: 60px 22px 28px; }
+  .insight-icon {
+    top: -24px;
+    width: 52px;
+    height: 52px;
+  }
   .persona-card { padding: 56px 22px 28px; }
   .persona-avatar { width: 60px; height: 60px; top: -30px; }
   .ideation-col { padding-right: 0; }

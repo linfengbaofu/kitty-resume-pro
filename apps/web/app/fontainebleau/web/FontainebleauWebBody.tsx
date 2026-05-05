@@ -312,7 +312,7 @@ export function FontainebleauWebBody() {
 
               <div className="fb-comp-grid">
                 <article className="fb-comp-card">
-                  <div className="fb-comp-brand">
+                  <div className="fb-comp-brand flex items-center justify-center h-10" >
                     <img src="/assets/fb-web-comp-fs-logo.png" alt="Four Seasons" loading="lazy" />
                   </div>
                   <div className="fb-comp-shot">
@@ -347,7 +347,7 @@ export function FontainebleauWebBody() {
                 </article>
 
                 <article className="fb-comp-card">
-                  <div className="fb-comp-brand">
+                  <div className="fb-comp-brand flex items-center justify-center h-10" >
                     <img src="/assets/fb-web-comp-mgm-logo.png" alt="MGM Resorts" loading="lazy" />
                   </div>
                   <div className="fb-comp-shot">
@@ -378,7 +378,7 @@ export function FontainebleauWebBody() {
                 </article>
 
                 <article className="fb-comp-card">
-                  <div className="fb-comp-brand">
+                  <div className="fb-comp-brand flex items-center justify-center h-10" >
                     <img src="/assets/fb-web-comp-wynn-logo.png" alt="Wynn Las Vegas" loading="lazy" />
                   </div>
                   <div className="fb-comp-shot">
