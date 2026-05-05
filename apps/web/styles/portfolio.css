@@ -1164,7 +1164,8 @@
   width: 46px;
   height: 46px;
   border-radius: 14px;
-  background: #131631;
+  padding: 4px;
+  /* background: #131631; */
   color: var(--color-portfolio-text);
 }
 .flow-icon--accent {
@@ -1172,8 +1173,7 @@
   color: #fff;
 }
 .flow-icon img {
-  width: 28px;
-  height: 28px;
+  width: 100%;
   object-fit: contain;
   display: block;
 }
