@@ -78,7 +78,6 @@ function toJsxFragment(inner) {
 }
 
 const sharedImports = `import { CaseHeader } from "@/components/portfolio/case-header"
-import { PortfolioFooter } from "@/components/portfolio/portfolio-footer"
 import { SkipLink } from "@/components/portfolio/skip-link"
 `
 
@@ -103,7 +102,6 @@ export function ${name}() {
         ariaLabel={${JSON.stringify(ariaLabel)}}
       />
 ${body}
-      <PortfolioFooter tone="case" />
     </>
   )
 }

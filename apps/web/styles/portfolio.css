@@ -788,19 +788,6 @@
   display: block;
 }
 
-.site-footer--case {
-  position: relative;
-  z-index: 1;
-  margin-top: 40px;
-}
-.site-footer--case .footer-rule {
-  border-top-color: rgba(255, 255, 255, 0.08);
-}
-.site-footer--case .footer-meta,
-.site-footer--case .footer-col-title {
-  color: var(--color-case-muted);
-}
-
 /* =========================================================
    Walmart case study — clickable previews (overview page)
    ========================================================= */

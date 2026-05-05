@@ -3,7 +3,6 @@
 /* Auto-generated from static HTML — structure and classes preserved; paths updated for Next.js */
 
 import { CaseHeader } from "@/components/portfolio/case-header"
-import { PortfolioFooter } from "@/components/portfolio/portfolio-footer"
 import { SkipLink } from "@/components/portfolio/skip-link"
 import { siteLinks } from "@/config/site-links"
 
@@ -772,7 +771,6 @@ export function FheraBody() {
               </div>
             </section>
           </main>
-      <PortfolioFooter tone="case" />
     </>
   )
 }

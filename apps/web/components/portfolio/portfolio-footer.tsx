@@ -7,16 +7,14 @@ import { siteLinks } from "@/config/site-links"
 import { FooterArrowIcon } from "@/components/portfolio/portfolio-icons"
 
 type PortfolioFooterProps = {
-  /** Case-study pages use muted footer colors on dark blue background */
-  tone?: "default" | "case"
   className?: string
 }
 
-export function PortfolioFooter({ tone = "default", className }: PortfolioFooterProps) {
+export function PortfolioFooter({ className }: PortfolioFooterProps) {
   return (
     <footer
       role="contentinfo"
-      className={cn("site-footer", tone === "case" && "site-footer--case", className)}
+      className={cn("site-footer relative z-[1]", className)}
     >
       <hr className="footer-rule" />
       <div className="footer-row">

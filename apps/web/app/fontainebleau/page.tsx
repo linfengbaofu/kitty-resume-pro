@@ -3,7 +3,6 @@ import type { Metadata } from "next"
 import Link from "next/link"
 
 import { CaseHeader } from "@/components/portfolio/case-header"
-import { PortfolioFooter } from "@/components/portfolio/portfolio-footer"
 import { SkipLink } from "@/components/portfolio/skip-link"
 import { siteLinks } from "@/config/site-links"
 
@@ -106,8 +105,6 @@ export default function FontainebleauPage() {
           </Link>
         </section>
       </main>
-
-      <PortfolioFooter tone="case" className="relative z-[1] mt-10" />
     </div>
   )
 }

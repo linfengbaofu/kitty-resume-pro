@@ -2,6 +2,7 @@ import { Inter } from "next/font/google"
 
 import "@workspace/ui/globals.css"
 import "../styles/portfolio.css"
+import { PortfolioFooter } from "@/components/portfolio/portfolio-footer"
 import { PortfolioRuntime } from "@/components/portfolio/portfolio-runtime"
 import { cn } from "@workspace/ui/lib/utils"
 
@@ -20,6 +21,9 @@ export default function RootLayout({
       <body className={cn(inter.className, "antialiased")}>
         <PortfolioRuntime />
         {children}
+        <div className="bg-portfolio-bg text-portfolio-text">
+          <PortfolioFooter />
+        </div>
       </body>
     </html>
   )

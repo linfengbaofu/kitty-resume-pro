@@ -4,7 +4,6 @@ import Link from "next/link"
 
 import { HomeSiteHeader } from "@/components/portfolio/home-site-header"
 import { CtaArrowIcon } from "@/components/portfolio/portfolio-icons"
-import { PortfolioFooter } from "@/components/portfolio/portfolio-footer"
 import { SkipLink } from "@/components/portfolio/skip-link"
 import { siteLinks } from "@/config/site-links"
 
@@ -364,8 +363,6 @@ export default function Page() {
           </ul>
         </section>
       </main>
-
-      <PortfolioFooter className="relative z-[1] mt-20 mb-14" />
     </div>
   )
 }
