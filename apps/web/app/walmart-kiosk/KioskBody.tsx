@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-/* eslint-disable @next/next/no-html-link-for-pages */
 /* Auto-generated from static HTML — structure and classes preserved; paths updated for Next.js */
 
 import { CaseHeader } from "@/components/portfolio/case-header"
@@ -82,13 +81,13 @@ export function KioskBody() {
               <div className="stat-grid stat-grid--four" role="list">
                 <article className="stat-card" role="listitem">
                   <span className="stat-icon" aria-hidden="true">
-                    
-                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M14 2c-2 4-6 6-9 7l4 4c1-3 3-7 7-9z" />
-                      <path d="M9 13l-3 3a3 3 0 1 0 4 4l3-3" />
-                      <path d="M14 6l4 4" />
-                      <circle cx="17" cy="7" r="1.5" />
-                    </svg>
+                    <img
+                      src="/assets/trend-up-01.png"
+                      alt=""
+                      width="28"
+                      height="28"
+                      loading="lazy"
+                    />
                   </span>
                   <p className="stat-text">
                     Cut average checkout time by
@@ -97,12 +96,13 @@ export function KioskBody() {
                 </article>
                 <article className="stat-card" role="listitem">
                   <span className="stat-icon" aria-hidden="true">
-                    
-                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M3 3v18h18" />
-                      <path d="M7 12l4 4 3-3 5 5" />
-                      <path d="M19 18v-4h-4" />
-                    </svg>
+                    <img
+                      src="/assets/line-chart-down-01.png"
+                      alt=""
+                      width="28"
+                      height="28"
+                      loading="lazy"
+                    />
                   </span>
                   <p className="stat-text">
                     Expanded self-service usage to
@@ -112,11 +112,13 @@ export function KioskBody() {
                 </article>
                 <article className="stat-card" role="listitem">
                   <span className="stat-icon" aria-hidden="true">
-                    
-                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
-                      <circle cx="12" cy="9" r="6" />
-                      <path d="M8.5 14.5L7 22l5-3 5 3-1.5-7.5" />
-                    </svg>
+                    <img
+                      src="/assets/car-01.png"
+                      alt=""
+                      width="28"
+                      height="28"
+                      loading="lazy"
+                    />
                   </span>
                   <p className="stat-text">
                     Achieved a <strong>4.6+</strong> user satisfaction rating,
@@ -126,11 +128,13 @@ export function KioskBody() {
                 </article>
                 <article className="stat-card" role="listitem">
                   <span className="stat-icon" aria-hidden="true">
-                    
-                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M3 8h14M14 4l4 4-4 4" />
-                      <path d="M21 16H7M10 20l-4-4 4-4" />
-                    </svg>
+                    <img
+                      src="/assets/compass-03.png"
+                      alt=""
+                      width="28"
+                      height="28"
+                      loading="lazy"
+                    />
                   </span>
                   <p className="stat-text">
                     Drove a <strong>28%</strong> increase in conversion through
@@ -391,12 +395,7 @@ export function KioskBody() {
                 <li className="flow-step">
                   <div className="flow-step-top">
                     <span className="flow-icon" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <rect x="3" y="3" width="7" height="7" rx="1.5" />
-                        <rect x="14" y="3" width="7" height="7" rx="1.5" />
-                        <rect x="3" y="14" width="7" height="7" rx="1.5" />
-                        <rect x="14" y="14" width="7" height="7" rx="1.5" />
-                      </svg>
+                      <img src="/assets/step1.png" alt="" width="28" height="28" loading="lazy" />
                     </span>
                     <span className="flow-arrow" aria-hidden="true"></span>
                   </div>
@@ -410,10 +409,7 @@ export function KioskBody() {
                 <li className="flow-step">
                   <div className="flow-step-top">
                     <span className="flow-icon" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M20 12.5l-8 8a2 2 0 0 1-2.8 0l-6.2-6.2a2 2 0 0 1-.6-1.4V4.5A1.5 1.5 0 0 1 3.9 3h8.4a2 2 0 0 1 1.4.6l6.3 6.3a1.8 1.8 0 0 1 0 2.6z" />
-                        <circle cx="8" cy="8" r="1.4" fill="currentColor" />
-                      </svg>
+                      <img src="/assets/step2.png" alt="" width="28" height="28" loading="lazy" />
                     </span>
                     <span className="flow-arrow" aria-hidden="true"></span>
                   </div>
@@ -427,11 +423,7 @@ export function KioskBody() {
                 <li className="flow-step">
                   <div className="flow-step-top">
                     <span className="flow-icon" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <circle cx="9" cy="20" r="1.5" />
-                        <circle cx="17" cy="20" r="1.5" />
-                        <path d="M3 4h2l2.4 11.4a2 2 0 0 0 2 1.6h7.2a2 2 0 0 0 2-1.5L21 8H6" />
-                      </svg>
+                      <img src="/assets/step3.png" alt="" width="28" height="28" loading="lazy" />
                     </span>
                     <span className="flow-arrow" aria-hidden="true"></span>
                   </div>
@@ -445,12 +437,7 @@ export function KioskBody() {
                 <li className="flow-step">
                   <div className="flow-step-top">
                     <span className="flow-icon" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <rect x="3" y="3" width="7" height="7" rx="1.5" />
-                        <rect x="14" y="3" width="7" height="7" rx="1.5" />
-                        <rect x="3" y="14" width="7" height="7" rx="1.5" />
-                        <rect x="14" y="14" width="7" height="7" rx="1.5" />
-                      </svg>
+                      <img src="/assets/step4.png" alt="" width="28" height="28" loading="lazy" />
                     </span>
                     <span className="flow-arrow" aria-hidden="true"></span>
                   </div>
@@ -461,10 +448,8 @@ export function KioskBody() {
                 </li>
                 <li className="flow-step flow-step--complete">
                   <div className="flow-step-top">
-                    <span className="flow-icon flow-icon--accent" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M5 12.5l4.5 4.5L19 7.5" />
-                      </svg>
+                    <span className="flow-icon" aria-hidden="true">
+                      <img src="/assets/step5.png" alt="" width="28" height="28" loading="lazy" />
                     </span>
                   </div>
                   <div className="flow-text">

@@ -1020,6 +1020,12 @@
   justify-content: center;
   color: var(--color-portfolio-text);
 }
+.stat-icon img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  display: block;
+}
 .stat-text {
   font-size: 16px;
   line-height: 1.55;
@@ -1164,6 +1170,12 @@
 .flow-icon--accent {
   background: #1e89ed;
   color: #fff;
+}
+.flow-icon img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  display: block;
 }
 .flow-arrow {
   flex: 1 1 0;
@@ -2017,10 +2029,6 @@ main {
   box-shadow: none;
   pointer-events: none;
 }
-.insight-icon--svg {
-  color: #b6efc6;
-  overflow: visible;
-}
 .insight-body {
   display: flex;
   flex-direction: column;
@@ -2063,6 +2071,21 @@ main {
 /* =========================================================
    Fhera — persona cards
    ========================================================= */
+.fhera-fhetime-figure {
+  width: 100%;
+  max-width: 1200px;
+  margin: 38px auto 0;
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid #1f2335;
+  background: #0d0e19;
+  line-height: 0;
+}
+.fhera-fhetime-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 .persona-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -2235,6 +2258,20 @@ main {
     conic-gradient(from 0deg, #6e8df0, #c66cff, #6e8df0);
   filter: blur(0.5px);
 }
+.ideation-bullet.ideation-bullet--frame {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
+  background: none;
+  filter: none;
+}
+.ideation-bullet.ideation-bullet--frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
 .ideation-title {
   font-family: var(--font-sans);
   font-weight: 500;
@@ -2248,6 +2285,9 @@ main {
   font-size: 16px;
   line-height: 1.6;
   margin: 0;
+}
+.ideation-grid--results-pills .brand-frame {
+  min-width: 0;
 }
 
 /* =========================================================
@@ -2286,6 +2326,24 @@ main {
 }
 .brand-frame--shadow {
   box-shadow: 0 30px 60px -24px rgba(0, 0, 0, 0.6);
+}
+.brand-frame--fhera-pill {
+  border-radius: 9999px;
+  overflow: hidden;
+}
+.fhera-showcase-pill {
+  background: #1f2130;
+  border-radius: 9999px;
+  overflow: hidden;
+  line-height: 0;
+  padding: clamp(12px, 2.5vw, 28px);
+  box-sizing: border-box;
+}
+.fhera-showcase-pill img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 /* =========================================================

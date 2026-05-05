@@ -380,21 +380,14 @@ export function FheraBody() {
 
               <div className="insight-grid">
                 <article className="insight-card">
-                  <svg
-                    className="insight-icon insight-icon--svg"
-                    viewBox="0 0 24 24"
+                  <img
+                    className="insight-icon"
+                    src="/assets/fhera-insight-strengths.png"
+                    alt=""
                     width="56"
                     height="56"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.6"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z" />
-                    <path d="M9.5 12.5l2 2 3.5-4" />
-                  </svg>
+                    loading="lazy"
+                  />
                   <div className="insight-body">
                     <h4 className="insight-title">Strengths</h4>
                     <p className="insight-sub">
@@ -410,7 +403,7 @@ export function FheraBody() {
                 <article className="insight-card">
                   <img
                     className="insight-icon"
-                    src="/assets/Info.png"
+                    src="/assets/fhera-insight-opportunities.png"
                     alt=""
                     width="56"
                     height="56"
@@ -431,7 +424,7 @@ export function FheraBody() {
                 <article className="insight-card">
                   <img
                     className="insight-icon"
-                    src="/assets/Danger.png"
+                    src="/assets/fhera-insight-threats.png"
                     alt=""
                     width="56"
                     height="56"
@@ -475,7 +468,6 @@ export function FheraBody() {
                   encryption products.
                 </p>
               </div>
-
               <div className="persona-grid">
                 <article className="persona-card">
                   <div className="persona-avatar">
@@ -522,6 +514,7 @@ export function FheraBody() {
                   </p>
                 </article>
               </div>
+             
 
               <div className="row-split">
                 <h3 className="row-split-title">Distinct Needs from Each Personas</h3>
@@ -535,32 +528,16 @@ export function FheraBody() {
                   experiences tailored to each user group.
                 </p>
               </div>
-
-              <div className="spectrum">
-                <div className="spectrum-track">
-                  <span className="spectrum-end spectrum-end--left">Handhold</span>
-                  <span className="spectrum-end spectrum-end--right">Flexibility</span>
-                  <div className="spectrum-bar"></div>
-                  <div className="spectrum-pin spectrum-pin--lily">
-                    <span className="spectrum-pin-avatar">
-                      <img src="/assets/fhera-persona-lily.png" alt="" />
-                    </span>
-                    <span className="spectrum-pin-label">Lily</span>
-                  </div>
-                  <div className="spectrum-pin spectrum-pin--alex">
-                    <span className="spectrum-pin-avatar">
-                      <img src="/assets/fhera-persona-alex.png" alt="" />
-                    </span>
-                    <span className="spectrum-pin-label">Alex</span>
-                  </div>
-                  <div className="spectrum-pin spectrum-pin--david">
-                    <span className="spectrum-pin-avatar">
-                      <img src="/assets/fhera-persona-david.png" alt="" />
-                    </span>
-                    <span className="spectrum-pin-label">David</span>
-                  </div>
-                </div>
-              </div>
+              <figure className="">
+                <img
+                  src="/assets/fhetime.png"
+                  alt="Fhera user personas: Alex the tech explorer, Lily the beginner, and David the enterprise buyer, with roles and needs."
+                  width={4800}
+                  height={648}
+                  loading="lazy"
+                />
+              </figure>
+            
 
               <div className="row-split">
                 <h3 className="row-split-title">Key Finding and Ideation</h3>
@@ -576,7 +553,15 @@ export function FheraBody() {
 
               <div className="ideation-grid">
                 <article className="ideation-col">
-                  <span className="ideation-bullet" aria-hidden="true"></span>
+                  <span className="ideation-bullet ideation-bullet--frame" aria-hidden="true">
+                    <img
+                      src="/assets/Frame%20143.png"
+                      alt=""
+                      width="40"
+                      height="40"
+                      loading="lazy"
+                    />
+                  </span>
                   <h4 className="ideation-title">Visual Representation</h4>
                   <p className="ideation-body">
                     I introduced a process-driven visual system to represent
@@ -585,7 +570,15 @@ export function FheraBody() {
                   </p>
                 </article>
                 <article className="ideation-col">
-                  <span className="ideation-bullet" aria-hidden="true"></span>
+                  <span className="ideation-bullet ideation-bullet--frame" aria-hidden="true">
+                    <img
+                      src="/assets/Frame%20144.png"
+                      alt=""
+                      width="40"
+                      height="40"
+                      loading="lazy"
+                    />
+                  </span>
                   <h4 className="ideation-title">Interaction Flow</h4>
                   <p className="ideation-body">
                     I designed a step-by-step flow (upload &rarr; encrypt
@@ -594,7 +587,15 @@ export function FheraBody() {
                   </p>
                 </article>
                 <article className="ideation-col">
-                  <span className="ideation-bullet" aria-hidden="true"></span>
+                  <span className="ideation-bullet ideation-bullet--frame" aria-hidden="true">
+                    <img
+                      src="/assets/Frame%20145.png"
+                      alt=""
+                      width="40"
+                      height="40"
+                      loading="lazy"
+                    />
+                  </span>
                   <h4 className="ideation-title">System Framing</h4>
                   <p className="ideation-body">
                     I separated the experience into Requesting Party and
@@ -781,9 +782,17 @@ export function FheraBody() {
               </header>
               <hr className="chapter-rule" />
 
-              <div className="ideation-grid">
+              <div className="ideation-grid ideation-grid--results-pills">
                 <article className="ideation-col">
-                  <span className="ideation-bullet" aria-hidden="true"></span>
+                  <figure className="brand-frame brand-frame--shadow brand-frame--fhera-pill">
+                    <div className="fhera-showcase-pill">
+                      <img
+                        src="/assets/p05-1.png"
+                        alt="Results highlight: reduced learning barrier for FHE concepts."
+                        loading="lazy"
+                      />
+                    </div>
+                  </figure>
                   <h4 className="ideation-title">-50% Learning Barrier</h4>
                   <p className="ideation-body">
                     User testing showed that visualizing the FHE process
@@ -792,7 +801,15 @@ export function FheraBody() {
                   </p>
                 </article>
                 <article className="ideation-col">
-                  <span className="ideation-bullet" aria-hidden="true"></span>
+                  <figure className="brand-frame brand-frame--fhera-pill">
+                    <div className="fhera-showcase-pill">
+                      <img
+                        src="/assets/p05-2.png"
+                        alt="Results highlight: increased user engagement with demos and content."
+                        loading="lazy"
+                      />
+                    </div>
+                  </figure>
                   <h4 className="ideation-title">+48% User Engagement</h4>
                   <p className="ideation-body">
                     Interactive demos and structured content increased user
@@ -801,7 +818,15 @@ export function FheraBody() {
                   </p>
                 </article>
                 <article className="ideation-col">
-                  <span className="ideation-bullet" aria-hidden="true"></span>
+                  <figure className="brand-frame brand-frame--fhera-pill">
+                    <div className="fhera-showcase-pill">
+                      <img
+                        src="/assets/p05-3.png"
+                        alt="Results highlight: stronger stakeholder confidence in the product."
+                        loading="lazy"
+                      />
+                    </div>
+                  </figure>
                   <h4 className="ideation-title">+32% Stakeholder Confidence</h4>
                   <p className="ideation-body">
                     Clear communication of product capabilities and technology
