@@ -66,17 +66,30 @@ export function FontainebleauWebBody() {
                 </p>
               </div>
 
-              <div className="fb-web-bento" role="list">
-                <div className="fb-web-bento-cell fb-web-bento-a" role="listitem">
+              <div className="fb-web-bento" role="group" aria-label="Fontainebleau Las Vegas photography collage">
+                <div className="fb-web-bento-cell fb-web-bento-a">
                   <img src="/assets/fb-web-bento-a.png" alt="Exterior view of the Fontainebleau Las Vegas tower." loading="lazy" />
                 </div>
-                <div className="fb-web-bento-cell fb-web-bento-b" role="listitem">
-                  <img src="/assets/fb-web-bento-b.png" alt="Resort interior detail." loading="lazy" />
+                <div className="fb-web-bento-cell fb-web-bento-b">
+                  <img src="/assets/fb-web-bento-b.png" alt="Resort lounge with pool table and sunset view." loading="lazy" />
                 </div>
-                <div className="fb-web-bento-cell fb-web-bento-c" role="listitem">
-                  <img src="/assets/fb-web-bento-c.png" alt="Hotel guest room interior." loading="lazy" />
+                <div
+                  className="fb-web-bento-right-stack"
+                  role="group"
+                  aria-label="Guest room and resort exterior"
+                >
+                  <div className="fb-web-bento-right-half">
+                    <img src="/assets/fb-web-bento-c.png" alt="Hotel guest room interior." loading="lazy" />
+                  </div>
+                  <div className="fb-web-bento-right-half">
+                    <img
+                      src="/assets/fb-web-bento-f.png"
+                      alt="Resort tower and skyline at dusk."
+                      loading="lazy"
+                    />
+                  </div>
                 </div>
-                <div className="fb-web-bento-cell fb-web-bento-d" role="listitem">
+                <div className="fb-web-bento-cell fb-web-bento-d">
                   <img
                     className="fb-web-bento-d-logo"
                     src="/assets/fb-web-bento-logo.png"
@@ -86,22 +99,17 @@ export function FontainebleauWebBody() {
                     height="86"
                   />
                 </div>
-                <div className="fb-web-bento-cell fb-web-bento-e" role="listitem">
-                  <img src="/assets/fb-web-bento-e.png" alt="Dining experience at the resort." loading="lazy" />
-                </div>
-                <div className="fb-web-bento-cell fb-web-bento-f" role="listitem">
-                  <img
-                    src="/assets/fb-web-bento-g.png"
-                    alt="Indoor spa and lounge seating with blue sofas."
-                    loading="lazy"
-                  />
-                </div>
-                <div className="fb-web-bento-cell fb-web-bento-g" role="listitem">
-                  <img
-                    src="/assets/fb-web-bento-f.png"
-                    alt="Tall resort tower and skyline at dusk."
-                    loading="lazy"
-                  />
+                <div className="fb-web-bento-row3-left">
+                  <div className="fb-web-bento-cell fb-web-bento-f">
+                    <img
+                      src="/assets/fb-web-bento-g.png"
+                      alt="Indoor spa and lounge seating with blue sofas."
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="fb-web-bento-cell fb-web-bento-e">
+                    <img src="/assets/fb-web-bento-e.png" alt="Dining and BBQ platter at the resort." loading="lazy" />
+                  </div>
                 </div>
               </div>
             </section>

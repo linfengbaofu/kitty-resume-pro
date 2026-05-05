@@ -2630,19 +2630,17 @@ main {
   margin: 0 auto;
 }
 
+/* 3×3: right stack col3 rows 1–3 (inner 50/50 height). Row3 cols 1–2 = row3-left with f|e each 1/2 of that band */
 .fb-web-bento {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.42fr) minmax(0, 1fr);
-  /* Three equal rows: left 2+1, center 1+1+1, right 1+2 — bottoms of f / e / g align */
-  grid-template-rows: repeat(3, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.38fr) minmax(0, 0.92fr);
+  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 0.92fr);
   gap: 14px;
   width: 100%;
-  min-height: clamp(480px, 50vw, 680px);
   max-width: 1200px;
   margin: 0 auto;
-  list-style: none;
   padding: 0;
-  align-items: stretch;
+  min-height: clamp(520px, 52vw, 720px);
 }
 .fb-web-bento-cell {
   position: relative;
@@ -2651,8 +2649,32 @@ main {
   overflow: hidden;
   background: #0d0e19;
   padding: 0;
+  min-height: 0;
 }
 .fb-web-bento-cell img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.fb-web-bento-right-stack {
+  grid-column: 3;
+  grid-row: 1 / span 3;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-height: 0;
+  align-self: stretch;
+}
+.fb-web-bento-right-half {
+  flex: 1 1 0;
+  min-height: 0;
+  border-radius: var(--radius-portfolio-card);
+  border: 1px solid #1f2335;
+  overflow: hidden;
+  background: #0d0e19;
+}
+.fb-web-bento-right-half img {
   display: block;
   width: 100%;
   height: 100%;
@@ -2661,17 +2683,10 @@ main {
 .fb-web-bento-a {
   grid-column: 1;
   grid-row: 1 / span 2;
-  min-height: 0;
 }
 .fb-web-bento-b {
   grid-column: 2;
   grid-row: 1;
-  min-height: 0;
-}
-.fb-web-bento-c {
-  grid-column: 3;
-  grid-row: 1;
-  min-height: 0;
 }
 .fb-web-bento-d {
   grid-column: 2;
@@ -2688,19 +2703,15 @@ main {
   height: auto;
   object-fit: contain;
 }
-.fb-web-bento-e {
-  grid-column: 2;
+.fb-web-bento-row3-left {
+  grid-column: 1 / span 2;
   grid-row: 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
   min-height: 0;
 }
-.fb-web-bento-f {
-  grid-column: 1;
-  grid-row: 3;
-  min-height: 0;
-}
-.fb-web-bento-g {
-  grid-column: 3;
-  grid-row: 2 / span 2;
+.fb-web-bento-row3-left .fb-web-bento-cell {
   min-height: 0;
 }
 
@@ -2847,23 +2858,29 @@ main {
     grid-auto-rows: minmax(160px, auto);
     min-height: 0;
   }
-  .fb-web-bento-a,
+  .fb-web-bento-a {
+    grid-column: 1 / -1;
+    grid-row: auto;
+    min-height: 280px;
+  }
   .fb-web-bento-b,
-  .fb-web-bento-c,
   .fb-web-bento-d,
-  .fb-web-bento-e,
-  .fb-web-bento-f,
-  .fb-web-bento-g {
+  .fb-web-bento-right-stack,
+  .fb-web-bento-row3-left {
     grid-column: auto;
     grid-row: auto;
   }
-  .fb-web-bento-a {
-    grid-column: 1 / -1;
-    min-height: 280px;
+  .fb-web-bento-right-stack {
+    grid-row: auto;
+    min-height: 300px;
   }
   .fb-web-bento-d {
     grid-column: 1 / -1;
     min-height: 240px;
+  }
+  .fb-web-bento-row3-left {
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr 1fr;
   }
   .fb-comp-grid {
     grid-template-columns: 1fr;
@@ -2879,27 +2896,31 @@ main {
 
   .fb-web-bento {
     grid-template-columns: 1fr;
-    grid-template-rows: none;
     grid-auto-rows: minmax(160px, auto);
-    gap: 14px;
     min-height: 0;
   }
   .fb-web-bento-a,
   .fb-web-bento-b,
-  .fb-web-bento-c,
   .fb-web-bento-d,
-  .fb-web-bento-e,
-  .fb-web-bento-f,
-  .fb-web-bento-g {
+  .fb-web-bento-right-stack,
+  .fb-web-bento-row3-left {
     grid-column: 1;
     grid-row: auto;
+  }
+  .fb-web-bento-right-stack {
     min-height: 160px;
+  }
+  .fb-web-bento-right-half {
+    min-height: 140px;
   }
   .fb-web-bento-a {
     min-height: 220px;
   }
   .fb-web-bento-d {
     min-height: 200px;
+  }
+  .fb-web-bento-row3-left {
+    grid-template-columns: 1fr;
   }
 }
 
