@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-/* eslint-disable @next/next/no-html-link-for-pages */
 /* Auto-generated from static HTML — structure and classes preserved; paths updated for Next.js */
 
 import { CaseHeader } from "@/components/portfolio/case-header"
@@ -351,13 +350,22 @@ export function FheraBody() {
               </div>
 
               <div className="insight-grid">
-                <article className="insight-card insight-card--good">
-                  <span className="insight-shield insight-shield--good" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z" />
-                      <path d="M9.5 12.5l2 2 3.5-4" />
-                    </svg>
-                  </span>
+                <article className="insight-card">
+                  <svg
+                    className="insight-icon insight-icon--svg"
+                    viewBox="0 0 24 24"
+                    width="56"
+                    height="56"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.6"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z" />
+                    <path d="M9.5 12.5l2 2 3.5-4" />
+                  </svg>
                   <div className="insight-body">
                     <h4 className="insight-title">Strengths</h4>
                     <p className="insight-sub">
@@ -370,13 +378,15 @@ export function FheraBody() {
                   </div>
                 </article>
 
-                <article className="insight-card insight-card--opp">
-                  <span className="insight-shield insight-shield--opp" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-                      <circle cx="12" cy="12" r="9" />
-                      <path d="M12 8v4M12 16h.01" />
-                    </svg>
-                  </span>
+                <article className="insight-card">
+                  <img
+                    className="insight-icon"
+                    src="/assets/Info.png"
+                    alt=""
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  />
                   <div className="insight-body">
                     <h4 className="insight-title">Opportunities</h4>
                     <p className="insight-sub">
@@ -389,13 +399,15 @@ export function FheraBody() {
                   </div>
                 </article>
 
-                <article className="insight-card insight-card--threat">
-                  <span className="insight-shield insight-shield--threat" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M12 3l10 18H2L12 3z" />
-                      <path d="M12 10v5M12 18h.01" />
-                    </svg>
-                  </span>
+                <article className="insight-card">
+                  <img
+                    className="insight-icon"
+                    src="/assets/Danger.png"
+                    alt=""
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  />
                   <div className="insight-body">
                     <h4 className="insight-title">Potential Threats</h4>
                     <p className="insight-sub">

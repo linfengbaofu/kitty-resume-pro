@@ -235,11 +235,14 @@ export function FontainebleauWebBody() {
 
               <div className="insight-grid">
                 <article className="insight-card">
-                  <div className="insight-shield insight-shield--good" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M20 6L9 17l-5-5" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </div>
+                  <img
+                    className="insight-icon"
+                    src="/assets/Iconly.png"
+                    alt=""
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  />
                   <div className="insight-body">
                     <h4 className="insight-title">Must Do</h4>
                     <p className="insight-sub">Features that are industrial-standard or validated in research</p>
@@ -250,12 +253,14 @@ export function FontainebleauWebBody() {
                   </div>
                 </article>
                 <article className="insight-card">
-                  <div className="insight-shield insight-shield--opp" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" strokeWidth="2">
-                      <circle cx="12" cy="12" r="9" />
-                      <path d="M12 10v4M12 16h.01" strokeLinecap="round" />
-                    </svg>
-                  </div>
+                  <img
+                    className="insight-icon"
+                    src="/assets/Info.png"
+                    alt=""
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  />
                   <div className="insight-body">
                     <h4 className="insight-title">Opportunities</h4>
                     <p className="insight-sub">Potential opportunities that makes the experience better</p>
@@ -266,12 +271,14 @@ export function FontainebleauWebBody() {
                   </div>
                 </article>
                 <article className="insight-card">
-                  <div className="insight-shield insight-shield--threat" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" width="38" height="38" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M12 9v4M12 17h.01" strokeLinecap="round" />
-                      <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" strokeLinejoin="round" />
-                    </svg>
-                  </div>
+                  <img
+                    className="insight-icon"
+                    src="/assets/Danger.png"
+                    alt=""
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  />
                   <div className="insight-body">
                     <h4 className="insight-title">Potential Threats</h4>
                     <p className="insight-sub">Features that are seen in other products nevertheless cause harms</p>
