@@ -1839,6 +1839,12 @@ main {
   justify-content: center;
   color: #c5c8e6;
 }
+.goal-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
 .goal-text {
   margin: 0;
   font-size: 18px;
@@ -2266,7 +2272,6 @@ main {
   width: 100%;
   border-radius: 24px;
   overflow: hidden;
-  background: #0e1330;
   display: block;
 }
 .brand-frame img {
@@ -2277,7 +2282,7 @@ main {
 }
 .brand-frame--draft img,
 .brand-frame--final img {
-  background: #f7f7f9;
+  background: transparent;
 }
 .brand-frame--shadow {
   box-shadow: 0 30px 60px -24px rgba(0, 0, 0, 0.6);
@@ -2668,6 +2673,18 @@ main {
   min-height: 0;
 }
 
+/* Fhera intro reuses fb-web-bento grid; center tile is full-bleed image (not hotel logo plate) */
+.fhera-bento .fb-web-bento-d {
+  display: block;
+  padding: 0;
+  background: #0d0e19;
+  border-color: #1f2335;
+}
+
+.fhera-bento-mobile {
+  display: none;
+}
+
 .goal-grid--fb-web {
   align-content: start;
 }
@@ -2874,6 +2891,22 @@ main {
   }
   .fb-web-bento-row3-left {
     grid-template-columns: 1fr;
+  }
+
+  .fb-web-bento.fhera-bento.fhera-bento--desktop {
+    display: none !important;
+  }
+  .fhera-bento-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .fhera-bento-mobile-cell {
+    min-height: 160px;
   }
 }
 

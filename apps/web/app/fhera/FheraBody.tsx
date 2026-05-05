@@ -5,6 +5,12 @@ import { CaseHeader } from "@/components/portfolio/case-header"
 import { SkipLink } from "@/components/portfolio/skip-link"
 import { siteLinks } from "@/config/site-links"
 
+import {
+  fheraBentoCollage as bento,
+  fheraBentoMobileSequence,
+  fheraBentoSrc,
+} from "./fhera-bento-assets"
+
 export function FheraBody() {
   return (
     <>
@@ -49,45 +55,60 @@ export function FheraBody() {
                 </p>
               </div>
 
-              <div className="bento" role="list" aria-label="Fhera applications">
-                <article className="bento-card bento-a" role="listitem">
-                  <h3 className="bento-title">
-                    Data Security <br />Reinvented
-                  </h3>
-                  <span className="bento-orb bento-orb--purple" aria-hidden="true"></span>
-                </article>
-
-                <article className="bento-card bento-b" role="listitem">
-                  <h3 className="bento-title">Privacy<br />Preserving AI</h3>
-                  <span className="bento-orb bento-orb--violet" aria-hidden="true"></span>
-                </article>
-
-                <article className="bento-card bento-c" role="listitem">
-                  <h3 className="bento-title">Decentralized<br />Identity</h3>
-                  <span className="bento-orb bento-orb--cyan" aria-hidden="true"></span>
-                </article>
-
-                <article className="bento-card bento-d" role="listitem">
-                  <span className="bento-orb bento-orb--center" aria-hidden="true"></span>
-                  <p className="bento-mark" aria-hidden="true">FHERA</p>
-                </article>
-
-                <article className="bento-card bento-e" role="listitem">
-                  <h3 className="bento-title bento-title--right">Trustless<br />Gaming</h3>
-                  <span className="bento-orb bento-orb--pink" aria-hidden="true"></span>
-                </article>
-
-                <article className="bento-card bento-f" role="listitem">
-                  <h3 className="bento-title">Confidential<br />Transaction</h3>
-                  <span className="bento-orb bento-orb--blue" aria-hidden="true"></span>
-                </article>
-
-                <article className="bento-card bento-g" role="listitem">
-                  <h3 className="bento-title bento-title--right">
-                    Confidential<br />DeFi
-                  </h3>
-                  <span className="bento-orb bento-orb--green" aria-hidden="true"></span>
-                </article>
+              <div className="fhera-intro-bento-media">
+                <div
+                  className="fb-web-bento fhera-bento fhera-bento--desktop"
+                  role="group"
+                  aria-label="Fhera applications and technology collage"
+                >
+                  <div className="fb-web-bento-cell fb-web-bento-a">
+                    <img src={fheraBentoSrc(bento.leftTall.file)} alt={bento.leftTall.alt} loading="lazy" />
+                  </div>
+                  <div className="fb-web-bento-cell fb-web-bento-b">
+                    <img src={fheraBentoSrc(bento.topCenter.file)} alt={bento.topCenter.alt} loading="lazy" />
+                  </div>
+                  <div
+                    className="fb-web-bento-right-stack"
+                    role="group"
+                    aria-label="Decentralized identity and trustless gaming"
+                  >
+                    <div className="fb-web-bento-right-half">
+                      <img src={fheraBentoSrc(bento.rightTop.file)} alt={bento.rightTop.alt} loading="lazy" />
+                    </div>
+                    <div className="fb-web-bento-right-half">
+                      <img
+                        src={fheraBentoSrc(bento.rightBottom.file)}
+                        alt={bento.rightBottom.alt}
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <div className="fb-web-bento-cell fb-web-bento-d">
+                    <img src={fheraBentoSrc(bento.center.file)} alt={bento.center.alt} loading="lazy" />
+                  </div>
+                  <div className="fb-web-bento-row3-left">
+                    <div className="fb-web-bento-cell fb-web-bento-f">
+                      <img src={fheraBentoSrc(bento.bottomLeft.file)} alt={bento.bottomLeft.alt} loading="lazy" />
+                    </div>
+                    <div className="fb-web-bento-cell fb-web-bento-e">
+                      <img src={fheraBentoSrc(bento.bottomRight.file)} alt={bento.bottomRight.alt} loading="lazy" />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="fhera-bento-mobile"
+                  role="group"
+                  aria-label="Fhera applications and technology collage"
+                >
+                  {fheraBentoMobileSequence().map((item, index) => (
+                    <div
+                      key={`${item.file}-${index}`}
+                      className="fb-web-bento-cell fhera-bento-mobile-cell"
+                    >
+                      <img src={fheraBentoSrc(item.file)} alt={item.alt} loading="lazy" />
+                    </div>
+                  ))}
+                </div>
               </div>
             </section>
 
@@ -148,12 +169,13 @@ export function FheraBody() {
                 <div className="goal-grid" role="list">
                   <article className="goal-card" role="listitem">
                     <span className="goal-icon" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
-                        <rect x="3" y="3" width="7" height="7" rx="1.4" />
-                        <rect x="14" y="3" width="7" height="7" rx="1.4" />
-                        <rect x="3" y="14" width="7" height="7" rx="1.4" />
-                        <rect x="14" y="14" width="7" height="7" rx="1.4" />
-                      </svg>
+                      <img
+                        src="/assets/fb-web-goal-1.png"
+                        alt=""
+                        width="50"
+                        height="50"
+                        loading="lazy"
+                      />
                     </span>
                     <p className="goal-text">
                       Developed a comprehensive design system that clearly
@@ -162,11 +184,13 @@ export function FheraBody() {
                   </article>
                   <article className="goal-card" role="listitem">
                     <span className="goal-icon" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
-                        <rect x="3" y="4" width="18" height="14" rx="2" />
-                        <path d="M3 8h18" />
-                        <path d="M9 14h6" />
-                      </svg>
+                      <img
+                        src="/assets/fb-web-goal-2.png"
+                        alt=""
+                        width="50"
+                        height="50"
+                        loading="lazy"
+                      />
                     </span>
                     <p className="goal-text">
                       Lunch a landing page to direct to functionalities
@@ -174,11 +198,13 @@ export function FheraBody() {
                   </article>
                   <article className="goal-card" role="listitem">
                     <span className="goal-icon" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M12 3l8 4-8 4-8-4 8-4z" />
-                        <path d="M4 11l8 4 8-4" />
-                        <path d="M4 15l8 4 8-4" />
-                      </svg>
+                      <img
+                        src="/assets/fb-web-goal-3.png"
+                        alt=""
+                        width="50"
+                        height="50"
+                        loading="lazy"
+                      />
                     </span>
                     <p className="goal-text">
                       Explain Fully Homomorphic Encryption (FHE) technology to
@@ -187,10 +213,13 @@ export function FheraBody() {
                   </article>
                   <article className="goal-card" role="listitem">
                     <span className="goal-icon" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M4 19V5a2 2 0 0 1 2-2h11l3 3v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z" />
-                        <path d="M8 8h7M8 12h9M8 16h6" />
-                      </svg>
+                      <img
+                        src="/assets/fb-web-goal-4.png"
+                        alt=""
+                        width="50"
+                        height="50"
+                        loading="lazy"
+                      />
                     </span>
                     <p className="goal-text">
                       Explore and provide real-time news updates related to the
