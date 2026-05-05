@@ -62,11 +62,10 @@ export function FontainebleauWebBody() {
                   <img src="/assets/fb-web-bento-c.png" alt="Hotel guest room interior." loading="lazy" />
                 </div>
                 <div className="fb-web-bento-cell fb-web-bento-d" role="listitem">
-                  <img className="fb-web-bento-d-bg" src="/assets/fb-web-bento-d-bg.png" alt="" loading="lazy" />
                   <img
                     className="fb-web-bento-d-logo"
                     src="/assets/fb-web-bento-logo.png"
-                    alt="Fontainebleau monogram mark"
+                    alt="Fontainebleau Las Vegas logo"
                     loading="lazy"
                     width="317"
                     height="86"
@@ -153,8 +152,8 @@ export function FontainebleauWebBody() {
                   </article>
                   <article className="goal-card">
                     <div className="goal-icon goal-icon--duo" aria-hidden="true">
-                      <img src="/assets/fb-web-goal-3a.png" alt="" width="50" height="50" loading="lazy" />
-                      <img src="/assets/fb-web-goal-3b.png" alt="" width="50" height="50" loading="lazy" />
+                    <img src="/assets/fb-web-goal-3.png" alt="Provide detailed and intuitive information for each service to help users make confident decisions" width="50" height="50" loading="lazy" />
+
                     </div>
                     <p className="goal-text">
                       Provide detailed and intuitive information for each service to help users make confident decisions
