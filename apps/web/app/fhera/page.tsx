@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function FheraPage() {
   return (
-    <div className="page-fhera page-case page-case--detail relative min-h-screen text-white">
+    <div className="page-fhera page-case page-case--detail relative min-h-screen overflow-x-hidden text-white">
       <FheraBody />
     </div>
   )

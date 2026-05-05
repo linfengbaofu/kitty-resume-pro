@@ -1,4 +1,5 @@
 import { Inter } from "next/font/google"
+import type { Viewport } from "next"
 
 import "@workspace/ui/globals.css"
 import "../styles/portfolio.css"
@@ -11,6 +12,13 @@ const inter = Inter({
   variable: "--font-sans",
 })
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#0d0d0d",
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -18,10 +26,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className={cn(inter.variable)}>
-      <body className={cn(inter.className, "antialiased")}>
+      <body className={cn(inter.className, "antialiased flex min-h-screen flex-col")}>
         <PortfolioRuntime />
         {children}
-        <div className="bg-portfolio-bg text-portfolio-text">
+        <div className="shrink-0 bg-portfolio-bg text-portfolio-text pb-[env(safe-area-inset-bottom)]">
           <PortfolioFooter />
         </div>
       </body>

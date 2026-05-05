@@ -2,6 +2,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 
+import { FadeInView, ScaleFadeInView } from "@/components/portfolio/fade-in-view"
 import { HomeSiteHeader } from "@/components/portfolio/home-site-header"
 import { CtaArrowIcon } from "@/components/portfolio/portfolio-icons"
 import { SkipLink } from "@/components/portfolio/skip-link"
@@ -15,17 +16,20 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-[#0d0d0d] text-white">
+    <div className="min-h-screen overflow-x-hidden bg-[#0d0d0d] text-white">
       <SkipLink />
       <HomeSiteHeader />
 
       <main
         id="main"
-        className="flex w-full max-w-full flex-col items-center gap-[80px] pb-[60px] min-[721px]:gap-[96px] min-[1101px]:gap-[120px]"
+        className="flex w-full max-w-full flex-col items-center gap-[64px] pb-[max(60px,env(safe-area-inset-bottom))] min-[721px]:gap-[80px] min-[721px]:pb-[72px] min-[1101px]:gap-[120px]"
       >
-        <section
-          className="grid w-[min(1200px,calc(100%-48px))] min-[1101px]:w-[min(1200px,calc(100%-120px))] grid-cols-1 items-center gap-10 min-[1101px]:grid-cols-[minmax(0,1fr)_minmax(0,468px)] min-[1101px]:gap-[77px]"
+        <FadeInView
+          as="section"
+          className="grid w-[min(1200px,calc(100%-40px))] min-[721px]:w-[min(1200px,calc(100%-48px))] min-[1101px]:w-[min(1200px,calc(100%-120px))] grid-cols-1 items-center gap-10 min-[1101px]:grid-cols-[minmax(0,1fr)_minmax(0,468px)] min-[1101px]:gap-[77px]"
           aria-labelledby="hero-title"
+          y={16}
+          amount={0.2}
         >
           <div className="flex max-w-[599px] flex-col gap-7">
             <h1
@@ -58,12 +62,14 @@ export default function Page() {
               loading="eager"
             />
           </div>
-        </section>
+        </FadeInView>
 
-        <section
+        <FadeInView
+          as="section"
           id="works"
-          className="flex w-[min(1200px,calc(100%-48px))] min-[1101px]:w-[min(1200px,calc(100%-120px))] flex-col gap-10"
+          className="flex w-[min(1200px,calc(100%-40px))] min-[721px]:w-[min(1200px,calc(100%-48px))] min-[1101px]:w-[min(1200px,calc(100%-120px))] flex-col gap-10"
           aria-labelledby="curated-title"
+          delay={0.05}
         >
           <header className="flex flex-col gap-3">
             <p className="inline-flex items-center gap-[11px] text-xl text-[#878787]">
@@ -76,11 +82,12 @@ export default function Page() {
             <hr className="mt-7 mb-0 h-0 w-full border-0 border-t border-[#2a2a2a]" />
           </header>
 
-          <Link
-            href={siteLinks.walmart}
-            className="group relative flex min-h-[580px] min-[1101px]:min-h-[720px] flex-col gap-6 overflow-hidden rounded-[25px] border-2 border-[#26282c] bg-[#151515] px-6 pb-0 pt-8 text-white transition hover:-translate-y-1 hover:border-[#4a4d54] min-[1101px]:px-8 min-[1101px]:pt-[41px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#ffcc02]"
-            aria-label="Open Walmart case study"
-          >
+          <ScaleFadeInView className="w-full" delay={0.06}>
+            <Link
+              href={siteLinks.walmart}
+              className="group relative flex min-h-[520px] min-[721px]:min-h-[580px] min-[1101px]:min-h-[720px] flex-col gap-6 overflow-hidden rounded-[25px] border-2 border-[#26282c] bg-[#151515] px-5 pb-0 pt-7 text-white transition hover:-translate-y-1 hover:border-[#4a4d54] min-[1101px]:px-8 min-[1101px]:pt-[41px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#ffcc02]"
+              aria-label="Open Walmart case study"
+            >
             <div className="flex flex-wrap items-center justify-between gap-6">
               <div className="h-[53px] w-12 shrink-0">
                 <img src="/assets/walmart-sparkle.png" alt="" className="h-full w-full object-contain" />
@@ -120,31 +127,21 @@ export default function Page() {
               </p>
             </div>
             <div
-              className="pointer-events-none absolute bottom-[-60px] left-1/2 flex w-[min(1100px,100%)] -translate-x-1/2 items-end justify-center min-[1101px]:bottom-[-40px]"
+              className="pointer-events-none absolute bottom-[-40px] left-1/2 flex w-[min(1100px,100%)] -translate-x-1/2 items-end justify-center min-[1101px]:bottom-[-40px]"
               aria-hidden
             >
-              <img
-                className="z-[3] -mr-[210px] h-auto w-[320px] min-[1101px]:w-[540px] translate-y-5 -rotate-3 drop-shadow-[0_28px_40px_rgba(0,0,0,0.55)] transition duration-500 group-hover:translate-y-0 group-hover:-rotate-[4deg] min-[1101px]:translate-y-5"
-                src="/assets/walmart-phone-1.png"
-                alt=""
-              />
-              <img
-                className="z-[2] h-auto w-[320px] min-[1101px]:w-[540px] -translate-y-8 rotate-3 drop-shadow-[0_28px_40px_rgba(0,0,0,0.55)] transition duration-500 group-hover:-translate-y-12 group-hover:rotate-3"
-                src="/assets/walmart-phone-2.png"
-                alt=""
-              />
-              <img
-                className="z-[1] -ml-[200px] h-auto w-[300px] min-[1101px]:w-[520px] translate-y-10 rotate-[9deg] drop-shadow-[0_28px_40px_rgba(0,0,0,0.55)] transition duration-500 group-hover:translate-y-5 group-hover:rotate-[10deg] min-[1101px]:translate-y-10"
-                src="/assets/walmart-phone-3.png"
-                alt=""
-              />
-            </div>
-          </Link>
-        </section>
+              <img className="w-full object-contain" src="/assets/walmart-phone.png" alt="" />
 
-        <section
-          className="flex w-[min(1200px,calc(100%-48px))] min-[1101px]:w-[min(1200px,calc(100%-120px))] flex-col gap-10"
+            </div>
+            </Link>
+          </ScaleFadeInView>
+        </FadeInView>
+
+        <FadeInView
+          as="section"
+          className="flex w-[min(1200px,calc(100%-40px))] min-[721px]:w-[min(1200px,calc(100%-48px))] min-[1101px]:w-[min(1200px,calc(100%-120px))] flex-col gap-10"
           aria-labelledby="other-title"
+          delay={0.04}
         >
           <header className="flex flex-col gap-3">
             <p className="inline-flex items-center gap-[11px] text-xl text-[#878787]">
@@ -158,7 +155,8 @@ export default function Page() {
           </header>
 
           <div className="grid grid-cols-1 gap-5 min-[721px]:grid-cols-2 min-[1101px]:gap-[30px]">
-            <article className="group relative flex min-h-[460px] min-[1101px]:min-h-[618px] flex-col overflow-hidden rounded-[25px] border border-[#26282c] bg-[#151515] px-5 py-6 transition hover:-translate-y-1 hover:border-[#34373c] hover:shadow-[0_24px_60px_-24px_rgba(0,0,0,0.6)] min-[1101px]:px-8 min-[1101px]:py-8">
+            <ScaleFadeInView className="min-h-0" delay={0.06}>
+            <article className="group relative flex min-h-[440px] min-[721px]:min-h-[460px] min-[1101px]:min-h-[618px] flex-col overflow-hidden rounded-[25px] border border-[#26282c] bg-[#151515] px-5 py-6 transition hover:-translate-y-1 hover:border-[#34373c] hover:shadow-[0_24px_60px_-24px_rgba(0,0,0,0.6)] min-[1101px]:px-8 min-[1101px]:py-8">
               <Link
                 href={siteLinks.fhera}
                 className="absolute inset-0 z-[3] rounded-[inherit] text-[0] indent-[-9999px] overflow-hidden whitespace-nowrap"
@@ -195,8 +193,10 @@ export default function Page() {
                 />
               </div>
             </article>
+            </ScaleFadeInView>
 
-            <article className="group relative flex min-h-[460px] min-[1101px]:min-h-[618px] flex-col overflow-hidden rounded-[25px] border border-[#26282c] bg-[#151515] px-5 py-6 transition hover:-translate-y-1 hover:border-[#34373c] hover:shadow-[0_24px_60px_-24px_rgba(0,0,0,0.6)] min-[1101px]:px-8 min-[1101px]:py-8">
+            <ScaleFadeInView className="min-h-0" delay={0.12}>
+            <article className="group relative flex min-h-[440px] min-[721px]:min-h-[460px] min-[1101px]:min-h-[618px] flex-col overflow-hidden rounded-[25px] border border-[#26282c] bg-[#151515] px-5 py-6 transition hover:-translate-y-1 hover:border-[#34373c] hover:shadow-[0_24px_60px_-24px_rgba(0,0,0,0.6)] min-[1101px]:px-8 min-[1101px]:py-8">
               <div className="relative z-[2] flex flex-col gap-6">
                 <div className="flex items-center justify-between gap-4">
                   <div className="flex h-[47px] w-[45px] shrink-0 items-center justify-center">
@@ -228,8 +228,10 @@ export default function Page() {
                 />
               </div>
             </article>
+            </ScaleFadeInView>
 
-            <article className="group relative flex min-h-[460px] min-[1101px]:min-h-[618px] flex-col overflow-hidden rounded-[25px] border border-[#26282c] bg-[#151515] px-5 py-6 transition hover:-translate-y-1 hover:border-[#34373c] hover:shadow-[0_24px_60px_-24px_rgba(0,0,0,0.6)] min-[1101px]:px-8 min-[1101px]:py-8">
+            <ScaleFadeInView className="min-h-0" delay={0.18}>
+            <article className="group relative flex min-h-[440px] min-[721px]:min-h-[460px] min-[1101px]:min-h-[618px] flex-col overflow-hidden rounded-[25px] border border-[#26282c] bg-[#151515] px-5 py-6 transition hover:-translate-y-1 hover:border-[#34373c] hover:shadow-[0_24px_60px_-24px_rgba(0,0,0,0.6)] min-[1101px]:px-8 min-[1101px]:py-8">
               <Link
                 href={siteLinks.fontainebleau}
                 className="absolute inset-0 z-[3] rounded-[inherit] text-[0] indent-[-9999px] overflow-hidden whitespace-nowrap"
@@ -270,8 +272,10 @@ export default function Page() {
                 />
               </div>
             </article>
+            </ScaleFadeInView>
 
-            <article className="group relative flex min-h-[460px] min-[1101px]:min-h-[618px] flex-col overflow-hidden rounded-[25px] border border-[#26282c] bg-[#151515] px-5 py-6 transition hover:-translate-y-1 hover:border-[#34373c] hover:shadow-[0_24px_60px_-24px_rgba(0,0,0,0.6)] min-[1101px]:px-8 min-[1101px]:py-8">
+            <ScaleFadeInView className="min-h-0" delay={0.24}>
+            <article className="group relative flex min-h-[440px] min-[721px]:min-h-[460px] min-[1101px]:min-h-[618px] flex-col overflow-hidden rounded-[25px] border border-[#26282c] bg-[#151515] px-5 py-6 transition hover:-translate-y-1 hover:border-[#34373c] hover:shadow-[0_24px_60px_-24px_rgba(0,0,0,0.6)] min-[1101px]:px-8 min-[1101px]:py-8">
               <div className="relative z-[2] flex flex-col gap-6">
                 <div className="flex items-center justify-between gap-4">
                   <div className="flex h-[47px] w-[45px] shrink-0 items-center justify-center">
@@ -303,13 +307,16 @@ export default function Page() {
                 />
               </div>
             </article>
+            </ScaleFadeInView>
           </div>
-        </section>
+        </FadeInView>
 
-        <section
+        <FadeInView
+          as="section"
           id="resume"
-          className="flex w-[min(1200px,calc(100%-48px))] min-[1101px]:w-[min(1200px,calc(100%-120px))] flex-col gap-10"
+          className="flex w-[min(1200px,calc(100%-40px))] min-[721px]:w-[min(1200px,calc(100%-48px))] min-[1101px]:w-[min(1200px,calc(100%-120px))] flex-col gap-10"
           aria-labelledby="strength-title"
+          delay={0.04}
         >
           <header className="flex flex-col gap-3">
             <p className="inline-flex items-center gap-[11px] text-xl text-[#878787]">
@@ -351,17 +358,23 @@ export default function Page() {
                 title: "Collaboration Driven",
                 body: "I enthusiastically engage in teamwork, contributing to an environment where collective efforts lead to greater outcomes.",
               },
-            ].map((item) => (
-              <li key={item.title} className="flex flex-col gap-4">
+            ].map((item, index) => (
+              <FadeInView
+                key={item.title}
+                as="li"
+                className="flex flex-col gap-4"
+                delay={index * 0.07}
+                y={18}
+              >
                 <div className="mx-auto flex size-[140px] min-[1101px]:size-[180px] items-center justify-center transition duration-300 hover:-translate-y-1.5 hover:scale-[1.04]">
                   <img src={item.icon} alt="" className="h-full w-full object-contain" />
                 </div>
                 <h3 className="mt-1 text-xl font-medium text-white">{item.title}</h3>
                 <p className="text-base leading-normal text-[#878787]">{item.body}</p>
-              </li>
+              </FadeInView>
             ))}
           </ul>
-        </section>
+        </FadeInView>
       </main>
     </div>
   )

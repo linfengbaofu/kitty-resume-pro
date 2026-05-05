@@ -1,4 +1,7 @@
+"use client"
+
 import Link from "next/link"
+import { motion, useReducedMotion } from "motion/react"
 
 import { cn } from "@workspace/ui/lib/utils"
 
@@ -10,12 +13,12 @@ type PortfolioFooterProps = {
   className?: string
 }
 
+const ease = [0.22, 1, 0.36, 1] as const
+
 export function PortfolioFooter({ className }: PortfolioFooterProps) {
-  return (
-    <footer
-      role="contentinfo"
-      className={cn("site-footer relative z-[1]", className)}
-    >
+  const reduce = useReducedMotion()
+  const content = (
+    <>
       <hr className="footer-rule" />
       <div className="footer-row">
         <div className="footer-brand">
@@ -56,6 +59,27 @@ export function PortfolioFooter({ className }: PortfolioFooterProps) {
           </div>
         </div>
       </div>
-    </footer>
+    </>
+  )
+
+  if (reduce) {
+    return (
+      <footer role="contentinfo" className={cn("site-footer relative z-[1]", className)}>
+        {content}
+      </footer>
+    )
+  }
+
+  return (
+    <motion.footer
+      role="contentinfo"
+      className={cn("site-footer relative z-[1]", className)}
+      initial={{ opacity: 0, y: 22 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.15 }}
+      transition={{ duration: 0.55, ease }}
+    >
+      {content}
+    </motion.footer>
   )
 }

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function WalmartKioskPage() {
   return (
-    <div className="page-walmart page-case page-case--detail min-h-screen text-white">
+    <div className="page-walmart page-case page-case--detail relative min-h-screen overflow-x-hidden text-white">
       <KioskBody />
     </div>
   )
