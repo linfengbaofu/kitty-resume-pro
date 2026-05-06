@@ -29,7 +29,7 @@ export default function RootLayout({
       <body className={cn(inter.className, "antialiased flex min-h-screen flex-col")}>
         <PortfolioRuntime />
         {children}
-        <div className="shrink-0 bg-portfolio-bg text-portfolio-text pb-[env(safe-area-inset-bottom)]">
+        <div className="shrink-0 bg-[#080912] text-portfolio-text pb-[env(safe-area-inset-bottom)]">
           <PortfolioFooter />
         </div>
       </body>
