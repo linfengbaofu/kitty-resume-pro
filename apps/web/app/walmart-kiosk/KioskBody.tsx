@@ -252,10 +252,7 @@ export function KioskBody() {
                 <li className="flow-step">
                   <div className="flow-step-top">
                     <span className="flow-icon" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <circle cx="11" cy="11" r="7" />
-                        <path d="M21 21l-4.5-4.5" />
-                      </svg>
+                      <img src="/assets/s1.png" alt="" width="28" height="28" loading="lazy" />
                     </span>
                     <span className="flow-arrow" aria-hidden="true"></span>
                   </div>
@@ -269,10 +266,7 @@ export function KioskBody() {
                 <li className="flow-step">
                   <div className="flow-step-top">
                     <span className="flow-icon" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M20 12.5l-8 8a2 2 0 0 1-2.8 0l-6.2-6.2a2 2 0 0 1-.6-1.4V4.5A1.5 1.5 0 0 1 3.9 3h8.4a2 2 0 0 1 1.4.6l6.3 6.3a1.8 1.8 0 0 1 0 2.6z" />
-                        <circle cx="8" cy="8" r="1.4" fill="currentColor" />
-                      </svg>
+                      <img src="/assets/s2.png" alt="" width="28" height="28" loading="lazy" />
                     </span>
                     <span className="flow-arrow" aria-hidden="true"></span>
                   </div>
@@ -286,11 +280,7 @@ export function KioskBody() {
                 <li className="flow-step">
                   <div className="flow-step-top">
                     <span className="flow-icon" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <circle cx="9" cy="20" r="1.5" />
-                        <circle cx="17" cy="20" r="1.5" />
-                        <path d="M3 4h2l2.4 11.4a2 2 0 0 0 2 1.6h7.2a2 2 0 0 0 2-1.5L21 8H6" />
-                      </svg>
+                      <img src="/assets/s3.png" alt="" width="28" height="28" loading="lazy" />
                     </span>
                     <span className="flow-arrow" aria-hidden="true"></span>
                   </div>
@@ -304,10 +294,7 @@ export function KioskBody() {
                 <li className="flow-step">
                   <div className="flow-step-top">
                     <span className="flow-icon" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <circle cx="12" cy="7" r="3.4" />
-                        <path d="M5 21c0-3.7 3.1-6.5 7-6.5s7 2.8 7 6.5" />
-                      </svg>
+                      <img src="/assets/s4.png" alt="" width="28" height="28" loading="lazy" />
                     </span>
                     <span className="flow-arrow" aria-hidden="true"></span>
                   </div>
@@ -319,11 +306,7 @@ export function KioskBody() {
                 <li className="flow-step">
                   <div className="flow-step-top">
                     <span className="flow-icon" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <rect x="3" y="6" width="18" height="13" rx="2" />
-                        <path d="M3 10h18" />
-                        <path d="M7 15h3" />
-                      </svg>
+                      <img src="/assets/s5.png" alt="" width="28" height="28" loading="lazy" />
                     </span>
                     <span className="flow-arrow flow-arrow--last" aria-hidden="true"></span>
                   </div>
@@ -638,11 +621,7 @@ export function KioskBody() {
               <div className="stat-grid stat-grid--two stat-grid--align-end" role="list">
                 <article className="stat-card" role="listitem">
                   <span className="stat-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M3 3v18h18" />
-                      <path d="M7 12l4 4 3-3 5 5" />
-                      <path d="M19 18v-4h-4" />
-                    </svg>
+                    <img src="/assets/line-chart-down-02.png" alt=""  loading="lazy" />
                   </span>
                   <p className="stat-text">
                     Reduced checkout time by ~<strong>40%</strong>, eliminating
@@ -651,12 +630,8 @@ export function KioskBody() {
                 </article>
                 <article className="stat-card" role="listitem">
                   <span className="stat-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M14 2c-2 4-6 6-9 7l4 4c1-3 3-7 7-9z" />
-                      <path d="M9 13l-3 3a3 3 0 1 0 4 4l3-3" />
-                      <path d="M14 6l4 4" />
-                      <circle cx="17" cy="7" r="1.5" />
-                    </svg>
+                  <img src="/assets/rocket-01.png" alt="" loading="lazy" />
+
                   </span>
                   <p className="stat-text">
                     Integrated navigation improved efficiency and engagement by
