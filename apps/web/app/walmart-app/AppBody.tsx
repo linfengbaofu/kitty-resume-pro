@@ -1,18 +1,18 @@
 /* eslint-disable @next/next/no-img-element */
-/* Auto-generated from static HTML — structure and classes preserved; paths updated for Next.js */
+/* Walmart App case study — body only; evolves independently from KioskBody */
 
 import { CaseHeader } from "@/components/portfolio/case-header"
 import { SkipLink } from "@/components/portfolio/skip-link"
 import { siteLinks } from "@/config/site-links"
 
-export function KioskBody() {
+export function AppBody() {
   return (
     <>
       <SkipLink />
       <CaseHeader
         backHref={siteLinks.walmart}
         backFallback={siteLinks.walmart}
-        ariaLabel="Back to Walmart overview"
+        ariaLabel="Back to Walmart case studies"
       />
 
           <main id="main" className="case-main case-main--detail">
@@ -20,22 +20,21 @@ export function KioskBody() {
             <section className="case-section case-hero-section" aria-labelledby="case-title">
               <div className="case-intro">
                 <h1 id="case-title" className="case-title">
-                  Walmart Kiosk &amp; Shopping Cart
+                  Walmart App
                 </h1>
                 <p className="case-subtitle">
-                  Design a streamlined in-store shopping experience from shelf
-                  to checkout
+                  Reform the online shopping experience for Walmart
                 </p>
                 <ul className="case-tags" aria-label="Project disciplines">
+                  <li className="case-tag">Product</li>
                   <li className="case-tag">Service Design</li>
-                  <li className="case-tag">Interaction</li>
-                  <li className="case-tag">Case study</li>
+                  <li className="case-tag">UI/UX</li>
                 </ul>
               </div>
-              <figure className="case-hero" data-hero="kiosk">
+              <figure className="case-hero" data-hero="app">
                 <img
-                  src="/assets/kiosk-hero.png"
-                  alt="A Walmart smart cart with a screen displaying a shopper's cart total and recommended items in the produce aisle."
+                  src="/assets/walmart-hero-1.png"
+                  alt="A shopper holding a phone running the redesigned Walmart app while picking fresh produce."
                   loading="eager"
                 />
               </figure>
@@ -65,15 +64,13 @@ export function KioskBody() {
                 <h4 className="row-label">Overview</h4>
                 <div className="row-body">
                   <p>
-                    I contributed to the interaction and visual design of Walmart
-                    China&rsquo;s in-store kiosk and smart cart, focusing on
-                    enabling a frictionless shelf-to-checkout shopping
-                    experience.
-                  </p>
-                  <p>
-                    My involvement included competitive analysis, full design
-                    execution, close collaboration with engineers, and
-                    continuous iteration.
+                    I contributed to the interaction and visual design of the
+                    Walmart mobile app, focusing on creating a seamless online
+                    shopping experience. The app enables users to browse and
+                    purchase products, track real-time delivery status, and
+                    access after-sales support. My work specifically focused on
+                    optimizing the shopping cart experience and enhancing
+                    after-sales service flows.
                   </p>
                 </div>
               </div>
@@ -82,7 +79,7 @@ export function KioskBody() {
                 <article className="stat-card" role="listitem">
                   <span className="stat-icon" aria-hidden="true">
                     <img
-                      src="/assets/rocket-01.png"
+                      src="/assets/trend-up-01.png"
                       alt=""
                       width="28"
                       height="28"
@@ -90,14 +87,14 @@ export function KioskBody() {
                     />
                   </span>
                   <p className="stat-text">
-                    Cut average checkout time by
-                    <strong>35%</strong>, enabling faster in-store purchases
+                    Optimizing the shopping cart flow increased{" "}
+                    <strong>25%</strong> checkout completion rate
                   </p>
                 </article>
                 <article className="stat-card" role="listitem">
                   <span className="stat-icon" aria-hidden="true">
                     <img
-                      src="/assets/line-chart-down-02.png"
+                      src="/assets/line-chart-down-01.png"
                       alt=""
                       width="28"
                       height="28"
@@ -105,15 +102,14 @@ export function KioskBody() {
                     />
                   </span>
                   <p className="stat-text">
-                    Expanded self-service usage to
-                    <strong>45%</strong> of in-store transactions, reducing
-                    reliance on cashier lines
+                    Redesigning the after-sales service flow reduced{" "}
+                    <strong>30%</strong> customer support resolution time
                   </p>
                 </article>
                 <article className="stat-card" role="listitem">
                   <span className="stat-icon" aria-hidden="true">
                     <img
-                      src="/assets/award-03.png"
+                      src="/assets/car-01.png"
                       alt=""
                       width="28"
                       height="28"
@@ -121,15 +117,14 @@ export function KioskBody() {
                     />
                   </span>
                   <p className="stat-text">
-                    Achieved a <strong>4.6+</strong> user satisfaction rating,
-                    with <strong>over 90%</strong> of users reporting a smoother
-                    shopping experience
+                    Real-time delivery tracking improved <strong>35%</strong>{" "}
+                    user engagement
                   </p>
                 </article>
                 <article className="stat-card" role="listitem">
                   <span className="stat-icon" aria-hidden="true">
                     <img
-                      src="/assets/switch-horizontal-02.png"
+                      src="/assets/compass-03.png"
                       alt=""
                       width="28"
                       height="28"
@@ -137,13 +132,13 @@ export function KioskBody() {
                     />
                   </span>
                   <p className="stat-text">
-                    Drove a <strong>28%</strong> increase in conversion through
-                    improved product visibility and simplified interactions
+                    Overall increase <strong>20%</strong> in user satisfaction,
+                    strengthening user trust in the platform
                   </p>
                 </article>
               </div>
 
-              <div className="ref-grid">
+              {/* <div className="ref-grid">
                 <a
                   className="ref-card"
                   href={siteLinks.refWalmartSelfCheckout}
@@ -210,7 +205,7 @@ export function KioskBody() {
                     </p>
                   </div>
                 </a>
-              </div>
+              </div> */}
             </section>
 
             

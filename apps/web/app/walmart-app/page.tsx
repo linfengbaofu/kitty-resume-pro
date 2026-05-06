@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 
-import { KioskBody } from "../walmart-kiosk/KioskBody"
+import { AppBody } from "./AppBody"
 
 export const metadata: Metadata = {
   title: "Walmart App · Kitty Li",
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function WalmartAppPage() {
   return (
     <div className="page-walmart page-case page-case--detail relative min-h-screen overflow-x-hidden text-white">
-      <KioskBody variant="app" />
+      <AppBody />
     </div>
   )
 }
