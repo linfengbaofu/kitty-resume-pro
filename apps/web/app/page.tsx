@@ -4,6 +4,7 @@ import Link from "next/link"
 
 import { FadeInView, ScaleFadeInView } from "@/components/portfolio/fade-in-view"
 import { HomeSiteHeader } from "@/components/portfolio/home-site-header"
+import { OtherSelectedWorkCard } from "@/components/portfolio/other-selected-work-card"
 import { CtaArrowIcon } from "@/components/portfolio/portfolio-icons"
 import { SkipLink } from "@/components/portfolio/skip-link"
 import { siteLinks } from "@/config/site-links"
@@ -13,6 +14,68 @@ export const metadata: Metadata = {
   description:
     "Portfolio of Xinyi (Kitty) Li, a product designer with 3 years of experience creating thoughtful digital experiences.",
 }
+
+const previewFrameBase =
+  "absolute top-auto flex items-end justify-center transition duration-500 group-hover:translate-y-[-6px] group-hover:scale-[1.03]"
+
+type OtherSelectedWork = {
+  key: string
+  title: string
+  description: string
+  tags: readonly string[]
+  logoSrc: string
+  previewSrc: string
+  previewFrameClassName: string
+  previewImageClassName?: string
+  logoImageClassName?: string
+  href?: string
+  linkAriaLabel?: string
+}
+
+const otherSelectedWorks: OtherSelectedWork[] = [
+  {
+    key: "fhera",
+    title: "Fhera",
+    description:
+      "A Web3 startup pioneering the largest encrypted database for FHE-powered computations",
+    tags: ["Visual Design", "Web Design"],
+    logoSrc: "/assets/fhera-logo.png",
+    previewSrc: "/assets/fhera-preview.png",
+    href: siteLinks.fhera,
+    linkAriaLabel: "Open Fhera case study",
+    previewFrameClassName: `${previewFrameBase} inset-x-[-10%] bottom-[0%] left-[0%] h-[70%]`,
+  },
+  {
+    key: "wangwang",
+    title: "Wang Wang",
+    description:
+      "An integrated digital platform delivering innovative cleaning solutions for residential communities",
+    tags: ["UI/UX", "Interaction"],
+    logoSrc: "/assets/wangwang-logo.png",
+    previewSrc: "/assets/wangwang-preview.png",
+    previewFrameClassName: `${previewFrameBase} inset-x-[-10%] bottom-[-5%] h-[70%]`,
+  },
+  {
+    key: "fontainebleau",
+    title: "Fontainebleau",
+    description: "An integrated platform providing innovative convenience services for customers",
+    tags: ["UI/UX", "Product"],
+    logoSrc: "/assets/fontainebleau-logo.png",
+    previewSrc: "/assets/fontainebleau-preview.png",
+    href: siteLinks.fontainebleau,
+    linkAriaLabel: "Open Fontainebleau case study",
+    previewFrameClassName: `${previewFrameBase} inset-x-[-1%] bottom-[0%] h-[70%]`,
+  },
+  {
+    key: "digicel",
+    title: "Digicel",
+    description: "Phone networks and home entertainment provider website design and development",
+    tags: ["Visual Design", "Web Design"],
+    logoSrc: "/assets/digicel-logo.png",
+    previewSrc: "/assets/digicel-preview.png",
+    previewFrameClassName: `${previewFrameBase} inset-x-[-2%] bottom-[-2%] h-[60%]`,
+  },
+]
 
 export default function Page() {
   return (
@@ -155,159 +218,22 @@ export default function Page() {
           </header>
 
           <div className="grid grid-cols-1 gap-5 min-[721px]:grid-cols-2 min-[1101px]:gap-[30px]">
-            <ScaleFadeInView className="min-h-0" delay={0.06}>
-            <article className="group relative flex min-h-[440px] min-[721px]:min-h-[460px] min-[1101px]:min-h-[618px] flex-col overflow-hidden rounded-[25px] border border-[#26282c] bg-[#151515] px-5 py-6 transition hover:-translate-y-1 hover:border-[#34373c] hover:shadow-[0_24px_60px_-24px_rgba(0,0,0,0.6)] min-[1101px]:px-8 min-[1101px]:py-8">
-              <Link
-                href={siteLinks.fhera}
-                className="absolute inset-0 z-[3] rounded-[inherit] text-[0] indent-[-9999px] overflow-hidden whitespace-nowrap"
-                aria-label="Open Fhera case study"
-              />
-              <div className="relative z-[2] flex flex-col gap-6">
-                <div className="flex items-center justify-between gap-4">
-                  <div className="flex h-[47px] w-[45px] shrink-0 items-center justify-center">
-                    <img src="/assets/fhera-logo.png" alt="" className="max-h-full max-w-full object-contain" />
-                  </div>
-                  <ul className="flex flex-wrap gap-3">
-                    {["Visual Design", "Web Design"].map((t) => (
-                      <li
-                        key={t}
-                        className="rounded-[30px] bg-[#111111] px-4 py-2.5 text-base font-medium leading-none"
-                      >
-                        {t}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="mb-1 text-xl font-semibold text-white min-[1101px]:text-2xl">Fhera</h3>
-                  <p className="max-w-[460px] text-[15px] font-medium leading-normal text-[#878787] min-[1101px]:text-lg">
-                    A Web3 startup pioneering the largest encrypted database for FHE-powered computations
-                  </p>
-                </div>
-              </div>
-              <div className="pointer-events-none absolute inset-x-[-10%] bottom-[-10%] top-auto flex h-[70%] items-end justify-center transition duration-500 group-hover:translate-y-[-6px] group-hover:scale-[1.03]">
-                <img
-                  src="/assets/fhera-preview.png"
-                  alt=""
-                  className="h-full w-full object-contain object-bottom [mask-image:linear-gradient(to_top,rgba(0,0,0,1)_70%,rgba(0,0,0,0)_100%)]"
+            {otherSelectedWorks.map((work, index) => (
+              <ScaleFadeInView key={work.key} className="min-h-0" delay={0.06 + index * 0.06}>
+                <OtherSelectedWorkCard
+                  title={work.title}
+                  description={work.description}
+                  tags={work.tags}
+                  logoSrc={work.logoSrc}
+                  previewSrc={work.previewSrc}
+                  previewFrameClassName={work.previewFrameClassName}
+                  previewImageClassName={work.previewImageClassName}
+                  logoImageClassName={work.logoImageClassName}
+                  href={work.href}
+                  linkAriaLabel={work.linkAriaLabel}
                 />
-              </div>
-            </article>
-            </ScaleFadeInView>
-
-            <ScaleFadeInView className="min-h-0" delay={0.12}>
-            <article className="group relative flex min-h-[440px] min-[721px]:min-h-[460px] min-[1101px]:min-h-[618px] flex-col overflow-hidden rounded-[25px] border border-[#26282c] bg-[#151515] px-5 py-6 transition hover:-translate-y-1 hover:border-[#34373c] hover:shadow-[0_24px_60px_-24px_rgba(0,0,0,0.6)] min-[1101px]:px-8 min-[1101px]:py-8">
-              <div className="relative z-[2] flex flex-col gap-6">
-                <div className="flex items-center justify-between gap-4">
-                  <div className="flex h-[47px] w-[45px] shrink-0 items-center justify-center">
-                    <img src="/assets/wangwang-logo.png" alt="" className="max-h-full max-w-full object-contain" />
-                  </div>
-                  <ul className="flex flex-wrap gap-3">
-                    {["UI/UX", "Interaction"].map((t) => (
-                      <li
-                        key={t}
-                        className="rounded-[30px] bg-[#111111] px-4 py-2.5 text-base font-medium leading-none"
-                      >
-                        {t}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="mb-1 text-xl font-semibold text-white min-[1101px]:text-2xl">Wang Wang</h3>
-                  <p className="max-w-[460px] text-[15px] font-medium leading-normal text-[#878787] min-[1101px]:text-lg">
-                    An integrated digital platform delivering innovative cleaning solutions for residential communities
-                  </p>
-                </div>
-              </div>
-              <div className="pointer-events-none absolute inset-x-[-10%] bottom-[-14%] top-auto flex h-[70%] items-end justify-center transition duration-500 group-hover:translate-y-[-6px] group-hover:scale-[1.03]">
-                <img
-                  src="/assets/wangwang-preview.png"
-                  alt=""
-                  className="h-full w-full object-contain object-bottom [mask-image:linear-gradient(to_top,rgba(0,0,0,1)_70%,rgba(0,0,0,0)_100%)]"
-                />
-              </div>
-            </article>
-            </ScaleFadeInView>
-
-            <ScaleFadeInView className="min-h-0" delay={0.18}>
-            <article className="group relative flex min-h-[440px] min-[721px]:min-h-[460px] min-[1101px]:min-h-[618px] flex-col overflow-hidden rounded-[25px] border border-[#26282c] bg-[#151515] px-5 py-6 transition hover:-translate-y-1 hover:border-[#34373c] hover:shadow-[0_24px_60px_-24px_rgba(0,0,0,0.6)] min-[1101px]:px-8 min-[1101px]:py-8">
-              <Link
-                href={siteLinks.fontainebleau}
-                className="absolute inset-0 z-[3] rounded-[inherit] text-[0] indent-[-9999px] overflow-hidden whitespace-nowrap"
-                aria-label="Open Fontainebleau case study"
-              />
-              <div className="relative z-[2] flex flex-col gap-6">
-                <div className="flex items-center justify-between gap-4">
-                  <div className="flex h-[47px] w-[45px] shrink-0 items-center justify-center">
-                    <img
-                      src="/assets/fontainebleau-logo.png"
-                      alt=""
-                      className="max-h-full max-w-full object-contain"
-                    />
-                  </div>
-                  <ul className="flex flex-wrap gap-3">
-                    {["UI/UX", "Product"].map((t) => (
-                      <li
-                        key={t}
-                        className="rounded-[30px] bg-[#111111] px-4 py-2.5 text-base font-medium leading-none"
-                      >
-                        {t}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="mb-1 text-xl font-semibold text-white min-[1101px]:text-2xl">Fontainebleau</h3>
-                  <p className="max-w-[460px] text-[15px] font-medium leading-normal text-[#878787] min-[1101px]:text-lg">
-                    An integrated platform providing innovative convenience services for customers
-                  </p>
-                </div>
-              </div>
-              <div className="pointer-events-none absolute inset-x-[-4%] bottom-[-6%] top-auto flex h-[64%] items-end justify-center transition duration-500 group-hover:translate-y-[-6px] group-hover:scale-[1.03]">
-                <img
-                  src="/assets/fontainebleau-preview.png"
-                  alt=""
-                  className="h-full w-full object-contain object-bottom [mask-image:linear-gradient(to_top,rgba(0,0,0,1)_70%,rgba(0,0,0,0)_100%)]"
-                />
-              </div>
-            </article>
-            </ScaleFadeInView>
-
-            <ScaleFadeInView className="min-h-0" delay={0.24}>
-            <article className="group relative flex min-h-[440px] min-[721px]:min-h-[460px] min-[1101px]:min-h-[618px] flex-col overflow-hidden rounded-[25px] border border-[#26282c] bg-[#151515] px-5 py-6 transition hover:-translate-y-1 hover:border-[#34373c] hover:shadow-[0_24px_60px_-24px_rgba(0,0,0,0.6)] min-[1101px]:px-8 min-[1101px]:py-8">
-              <div className="relative z-[2] flex flex-col gap-6">
-                <div className="flex items-center justify-between gap-4">
-                  <div className="flex h-[47px] w-[45px] shrink-0 items-center justify-center">
-                    <img src="/assets/digicel-logo.png" alt="" className="max-h-full max-w-full object-contain" />
-                  </div>
-                  <ul className="flex flex-wrap gap-3">
-                    {["Visual Design", "Web Design"].map((t) => (
-                      <li
-                        key={t}
-                        className="rounded-[30px] bg-[#111111] px-4 py-2.5 text-base font-medium leading-none"
-                      >
-                        {t}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="mb-1 text-xl font-semibold text-white min-[1101px]:text-2xl">Digicel</h3>
-                  <p className="max-w-[460px] text-[15px] font-medium leading-normal text-[#878787] min-[1101px]:text-lg">
-                    Phone networks and home entertainment provider website design and development
-                  </p>
-                </div>
-              </div>
-              <div className="pointer-events-none absolute inset-x-[-2%] bottom-[-2%] top-auto flex h-[60%] items-end justify-center transition duration-500 group-hover:translate-y-[-6px] group-hover:scale-[1.03]">
-                <img
-                  src="/assets/digicel-preview.png"
-                  alt=""
-                  className="h-full w-full object-contain object-bottom [mask-image:linear-gradient(to_top,rgba(0,0,0,1)_70%,rgba(0,0,0,0)_100%)]"
-                />
-              </div>
-            </article>
-            </ScaleFadeInView>
+              </ScaleFadeInView>
+            ))}
           </div>
         </FadeInView>
 
