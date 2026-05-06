@@ -190,7 +190,7 @@ const CardNav: React.FC<CardNavProps> = ({
         ref={navRef}
         className={`card-nav relative block h-[60px] overflow-hidden rounded-xl p-0 shadow-md will-change-[height] ${isExpanded ? "open" : ""}`}
       >
-        <div className="card-nav-top absolute inset-x-0 top-0 z-[2] flex h-[60px] items-center justify-between p-2 pl-[1.1rem]">
+        <div className="card-nav-top absolute inset-x-0 top-0 z-[2] flex h-[60px] items-center justify-between p-2 px-0">
           <button
             type="button"
             className={`hamburger-menu ${isHamburgerOpen ? "open" : ""} group order-2 flex h-full cursor-pointer flex-col items-center justify-center gap-[6px] md:order-none`}
