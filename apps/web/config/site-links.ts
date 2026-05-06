@@ -15,8 +15,8 @@ export const siteLinks = {
   fontainebleauApp: "/fontainebleau/app",
   fontainebleauWeb: "/fontainebleau/web",
 
-  linkedIn: "https://www.linkedin.com",
-  emailMailto: "mailto:hello@kittyli.com",
+  linkedIn: "https://www.linkedin.com/in/xinyili6364/",
+  emailMailto: "kittylidesign@gmail.com",
 
   /** Case copy — Walmart Kiosk references */
   refWalmartSelfCheckout: "https://kioskindustry.org/walmart-self-checkout-2025/",
