@@ -2336,7 +2336,10 @@ main {
   border-radius: 9999px;
   overflow: hidden;
   line-height: 0;
-  padding: clamp(12px, 2.5vw, 28px);
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  /* padding: clamp(12px, 2.5vw, 28px); */
   box-sizing: border-box;
 }
 .fhera-showcase-pill img {
