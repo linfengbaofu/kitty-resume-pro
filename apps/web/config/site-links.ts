@@ -15,7 +15,7 @@ export const siteLinks = {
   fontainebleauApp: "/fontainebleau/app",
   fontainebleauWeb: "/fontainebleau/web",
 
-  linkedIn: "https://www.linkedin.com/in/xinyili6364/",
+  linkedIn: "https://www.linkedin.com/in/xinyili6364",
   emailMailto: "kittylidesign@gmail.com",
 
   /** Case copy — Walmart Kiosk references */
