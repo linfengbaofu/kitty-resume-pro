@@ -200,7 +200,7 @@ const CardNav: React.FC<CardNavProps> = ({
             aria-label={isExpanded ? "Close menu" : "Open menu"}
             style={{ color: menuColor || "#000" }}
           >
-            {BrandMark({ className: "size-12 min-[721px]:size-14 min-[1101px]:size-[52px]" })}
+            {BrandMark({ className: "size-12 min-[721px]:size-14 min-[1101px]:size-[52px] -ml-1" })}
             {/* <img src={BrandMark} width={28} height={28} alt="Kitty Li logo" className="logo h-[28px]" /> */}
             {/* <span
               className={`hamburger-line h-[2px] w-[30px] bg-current transition-[transform,opacity,margin] duration-300 ease-linear [transform-origin:50%_50%] ${
