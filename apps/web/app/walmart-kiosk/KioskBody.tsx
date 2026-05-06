@@ -5,7 +5,15 @@ import { CaseHeader } from "@/components/portfolio/case-header"
 import { SkipLink } from "@/components/portfolio/skip-link"
 import { siteLinks } from "@/config/site-links"
 
-export function KioskBody() {
+export type KioskBodyVariant = "kiosk" | "app"
+
+type KioskBodyProps = {
+  variant?: KioskBodyVariant
+}
+
+export function KioskBody({ variant = "kiosk" }: KioskBodyProps) {
+  const isApp = variant === "app"
+
   return (
     <>
       <SkipLink />
@@ -20,22 +28,37 @@ export function KioskBody() {
             <section className="case-section case-hero-section" aria-labelledby="case-title">
               <div className="case-intro">
                 <h1 id="case-title" className="case-title">
-                  Walmart Kiosk &amp; Shopping Cart
+                  {isApp ? "Walmart App" : "Walmart Kiosk & Shopping Cart"}
                 </h1>
                 <p className="case-subtitle">
-                  Design a streamlined in-store shopping experience from shelf
-                  to checkout
+                  {isApp
+                    ? "Reform the online shopping experience for Walmart"
+                    : "Design a streamlined in-store shopping experience from shelf to checkout"}
                 </p>
                 <ul className="case-tags" aria-label="Project disciplines">
-                  <li className="case-tag">Service Design</li>
-                  <li className="case-tag">Interaction</li>
-                  <li className="case-tag">Case study</li>
+                  {isApp ? (
+                    <>
+                      <li className="case-tag">Product</li>
+                      <li className="case-tag">Service Design</li>
+                      <li className="case-tag">UI/UX</li>
+                    </>
+                  ) : (
+                    <>
+                      <li className="case-tag">Service Design</li>
+                      <li className="case-tag">Interaction</li>
+                      <li className="case-tag">Case study</li>
+                    </>
+                  )}
                 </ul>
               </div>
-              <figure className="case-hero" data-hero="kiosk">
+              <figure className="case-hero" data-hero={isApp ? "app" : "kiosk"}>
                 <img
-                  src="/assets/kiosk-hero.png"
-                  alt="A Walmart smart cart with a screen displaying a shopper's cart total and recommended items in the produce aisle."
+                  src={isApp ? "/assets/walmart-hero-1.png" : "/assets/kiosk-hero.png"}
+                  alt={
+                    isApp
+                      ? "A shopper holding a phone running the redesigned Walmart app while picking fresh produce."
+                      : "A Walmart smart cart with a screen displaying a shopper's cart total and recommended items in the produce aisle."
+                  }
                   loading="eager"
                 />
               </figure>
@@ -64,17 +87,31 @@ export function KioskBody() {
               <div className="chapter-row">
                 <h4 className="row-label">Overview</h4>
                 <div className="row-body">
-                  <p>
-                    I contributed to the interaction and visual design of Walmart
-                    China&rsquo;s in-store kiosk and smart cart, focusing on
-                    enabling a frictionless shelf-to-checkout shopping
-                    experience.
-                  </p>
-                  <p>
-                    My involvement included competitive analysis, full design
-                    execution, close collaboration with engineers, and
-                    continuous iteration.
-                  </p>
+                  {isApp ? (
+                    <p>
+                      I contributed to the interaction and visual design of the
+                      Walmart mobile app, focusing on creating a seamless online
+                      shopping experience. The app enables users to browse and
+                      purchase products, track real-time delivery status, and
+                      access after-sales support. My work specifically focused on
+                      optimizing the shopping cart experience and enhancing
+                      after-sales service flows.
+                    </p>
+                  ) : (
+                    <>
+                      <p>
+                        I contributed to the interaction and visual design of Walmart
+                        China&rsquo;s in-store kiosk and smart cart, focusing on
+                        enabling a frictionless shelf-to-checkout shopping
+                        experience.
+                      </p>
+                      <p>
+                        My involvement included competitive analysis, full design
+                        execution, close collaboration with engineers, and
+                        continuous iteration.
+                      </p>
+                    </>
+                  )}
                 </div>
               </div>
 
@@ -90,8 +127,17 @@ export function KioskBody() {
                     />
                   </span>
                   <p className="stat-text">
-                    Cut average checkout time by
-                    <strong>35%</strong>, enabling faster in-store purchases
+                    {isApp ? (
+                      <>
+                        Optimizing the shopping cart flow increased{" "}
+                        <strong>25%</strong> checkout completion rate
+                      </>
+                    ) : (
+                      <>
+                        Cut average checkout time by
+                        <strong>35%</strong>, enabling faster in-store purchases
+                      </>
+                    )}
                   </p>
                 </article>
                 <article className="stat-card" role="listitem">
@@ -105,9 +151,18 @@ export function KioskBody() {
                     />
                   </span>
                   <p className="stat-text">
-                    Expanded self-service usage to
-                    <strong>45%</strong> of in-store transactions, reducing
-                    reliance on cashier lines
+                    {isApp ? (
+                      <>
+                        Redesigning the after-sales service flow reduced{" "}
+                        <strong>30%</strong> customer support resolution time
+                      </>
+                    ) : (
+                      <>
+                        Expanded self-service usage to
+                        <strong>45%</strong> of in-store transactions, reducing
+                        reliance on cashier lines
+                      </>
+                    )}
                   </p>
                 </article>
                 <article className="stat-card" role="listitem">
@@ -121,9 +176,18 @@ export function KioskBody() {
                     />
                   </span>
                   <p className="stat-text">
-                    Achieved a <strong>4.6+</strong> user satisfaction rating,
-                    with <strong>over 90%</strong> of users reporting a smoother
-                    shopping experience
+                    {isApp ? (
+                      <>
+                        Real-time delivery tracking improved <strong>35%</strong>{" "}
+                        user engagement
+                      </>
+                    ) : (
+                      <>
+                        Achieved a <strong>4.6+</strong> user satisfaction rating,
+                        with <strong>over 90%</strong> of users reporting a smoother
+                        shopping experience
+                      </>
+                    )}
                   </p>
                 </article>
                 <article className="stat-card" role="listitem">
@@ -137,8 +201,17 @@ export function KioskBody() {
                     />
                   </span>
                   <p className="stat-text">
-                    Drove a <strong>28%</strong> increase in conversion through
-                    improved product visibility and simplified interactions
+                    {isApp ? (
+                      <>
+                        Overall increase <strong>20%</strong> in user satisfaction,
+                        strengthening user trust in the platform
+                      </>
+                    ) : (
+                      <>
+                        Drove a <strong>28%</strong> increase in conversion through
+                        improved product visibility and simplified interactions
+                      </>
+                    )}
                   </p>
                 </article>
               </div>

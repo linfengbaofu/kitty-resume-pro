@@ -8,6 +8,7 @@ export const siteLinks = {
   skipToMain: "#main",
 
   walmart: "/walmart",
+  walmartApp: "/walmart-app",
   walmartKiosk: "/walmart-kiosk",
   fhera: "/fhera",
   fontainebleau: "/fontainebleau",

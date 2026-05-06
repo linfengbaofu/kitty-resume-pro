@@ -24,25 +24,42 @@ export default function WalmartPage() {
       />
 
       <main id="main" className="case-main relative z-[1]">
-        <section className="case-section" aria-labelledby="case-1-title">
-          <div className="case-intro">
-            <h1 id="case-1-title" className="case-title">
-              Walmart App
-            </h1>
-            <p className="case-subtitle">Reform the online shopping experience for Walmart</p>
-            <ul className="case-tags" aria-label="Project disciplines">
-              <li className="case-tag">Product</li>
-              <li className="case-tag">Service Design</li>
-              <li className="case-tag">UI/UX</li>
-            </ul>
-          </div>
-          <figure className="case-hero" data-hero="primary">
-            <img
-              src="/assets/walmart-hero-1.png"
-              alt="A shopper holding a phone running the redesigned Walmart app while picking fresh produce."
-              loading="eager"
-            />
-          </figure>
+        <section className="case-section is-link" aria-labelledby="case-1-title">
+          <Link className="case-link" href={siteLinks.walmartApp} aria-labelledby="case-1-title">
+            <div className="case-intro">
+              <h1 id="case-1-title" className="case-title">
+                Walmart App
+              </h1>
+              <p className="case-subtitle">Reform the online shopping experience for Walmart</p>
+              <ul className="case-tags" aria-label="Project disciplines">
+                <li className="case-tag">Product</li>
+                <li className="case-tag">Service Design</li>
+                <li className="case-tag">UI/UX</li>
+              </ul>
+              <span className="case-cta" aria-hidden="true">
+                <span>View case study</span>
+                <span className="case-cta-arrow">
+                  <svg viewBox="0 0 8 8" width="12" height="12">
+                    <path
+                      d="M1 1h6v6M1 7L7 1"
+                      stroke="currentColor"
+                      strokeWidth="1.4"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </div>
+            <figure className="case-hero" data-hero="primary">
+              <img
+                src="/assets/walmart-hero-1.png"
+                alt="A shopper holding a phone running the redesigned Walmart app while picking fresh produce."
+                loading="eager"
+              />
+            </figure>
+          </Link>
         </section>
 
         <section className="case-section is-link" aria-labelledby="case-2-title">
