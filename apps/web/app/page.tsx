@@ -111,6 +111,8 @@ export default function Page() {
             </p>
             <Link
               href={siteLinks.homeResume}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex w-fit items-center gap-2 rounded-[30px] bg-[#ffcc02] px-[22px] py-[15px] text-lg font-medium tracking-[0.01em] text-[#0d0d0d] shadow-[0_6px_24px_rgba(255,204,2,0.18)] transition hover:-translate-y-0.5 hover:bg-[#ffd633] hover:shadow-[0_10px_30px_rgba(255,204,2,0.28)]"
             >
               <span>View Resume</span>

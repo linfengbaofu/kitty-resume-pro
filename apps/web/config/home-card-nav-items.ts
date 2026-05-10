@@ -9,7 +9,7 @@ export const homeCardNavItems: CardNavItem[] = [
     links: [
       { label: "Home", href: siteLinks.home, ariaLabel: "Kitty Li home" },
       { label: "Curated works", href: siteLinks.homeWorks, ariaLabel: "Jump to curated case studies" },
-      { label: "Resume", href: siteLinks.homeResume, ariaLabel: "Jump to resume" },
+      { label: "Resume", href: siteLinks.homeResume, ariaLabel: "Open resume PDF" },
     ],
   },
   {

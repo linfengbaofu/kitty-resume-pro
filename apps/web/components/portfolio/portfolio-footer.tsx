@@ -37,7 +37,12 @@ export function PortfolioFooter({ className }: PortfolioFooterProps) {
             <Link className="footer-link" href={siteLinks.homeWorks}>
               Works
             </Link>
-            <Link className="footer-link" href={siteLinks.homeResume}>
+            <Link
+              className="footer-link"
+              href={siteLinks.homeResume}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Resume
             </Link>
           </div>
