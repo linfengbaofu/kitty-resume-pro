@@ -4,7 +4,7 @@
 export const siteLinks = {
   home: "/",
   homeWorks: "/#works",
-  homeResume: "/assets/Kitty%20Li%20-%20Resume.pdf",
+  homeResume: "/assets/Kitty Li - Career.pdf",
   skipToMain: "#main",
 
   walmart: "/walmart",
